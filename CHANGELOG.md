@@ -1,12 +1,13 @@
 # Table of Contents
+
 - [Table of Contents](#table-of-contents)
 - [Versions](#versions)
-    - [`v1.0.0`](#v100)
-    - [`v1.0.1`](#v101)
+  - [`v1.0.0`](#v100)
+  - [`v1.0.1`](#v101)
 - [Installed](#installed)
-    - [`Routes`](#routes)
-    - [`Icons`](#icons)
-    - [`Installation Warehouse`](#installation-warehouse)
+  - [`Routes`](#routes)
+  - [`Icons`](#icons)
+  - [`Installation Warehouse`](#installation-warehouse)
 - [Todo:](#todo)
 
 ---
@@ -14,23 +15,27 @@
 # Versions
 
 ### `v1.0.0`
+
 - Initiated changelog file for frontend.
 - Set up completed
 
 ### `v1.0.1`
-- 
 
 ---
 
-
 # Installed
 
-###  `Routes`
+### `Tailwindcss`
+
+- `installed`: npm i tailwindcss
+- `installed`: npx tailwindcss init
+- `link`: https://tailwindcss.com/docs/guides/create-react-app
+
+### `Routes`
 
 - `installed`: npm i react-router-dom
-- `usage`: import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+- `usage`: import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 - `link`: https://www.npmjs.com/package/react-router-dom
-
 
 ### `Icons`
 
@@ -38,8 +43,8 @@
 - `usage`: import { FiInstagram } from "react-icons/fi";
 - `link`: https://www.npmjs.com/package/react-icons
 
-
 ### `Installation Warehouse`
+
 ```
 ### `For JSON:`
 
@@ -82,15 +87,18 @@
 - `link`: https://www.npmjs.com/package/axios
 
 ```
+
 ---
 
 # Todo:
-- [x] ~~`to change GitHub repository:` git remote set-url origin <remote_url>.git~~
+
+- [X] ~~`to change GitHub repository:` git remote set-url origin <remote_url>.git~~
 - [ ] change title, description in public > index.html
 
-
-
 <!-- CheatCodes: -->
+
 <!-- To do done: alt + c || alt + s -->
+
 <!-- Table of contents: ctrl + shift + p, Create Table of Contents -->
+
 <!-- Preview: ctrl + shift + v -->

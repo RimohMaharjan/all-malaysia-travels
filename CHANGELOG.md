@@ -85,7 +85,7 @@
 ---
 
 # Todo:
-- [ ] `to change GitHub repository:` git remote set-url origin <remote_url>.git
+- [x] ~~`to change GitHub repository:` git remote set-url origin <remote_url>.git~~
 - [ ] change title, description in public > index.html
 
 

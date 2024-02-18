@@ -1,8 +1,22 @@
-import React from 'react'
+import React ,{useState} from "react";
 
 const Nav = () => {
+
+  const [color, setColor] = useState(false);
+  const changeColor = () => {
+    if (window.scrollY >= 10) {
+      setColor(true);
+    } else {
+      setColor(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeColor);
+
   return (
-    <nav className="fixed w-screen bg-transparent-600 p-4 z-20">
+    <nav className={`fixed w-screen bg-transparent-600 p-6 z-20 ${
+      color ? "shadow-lg bg-[#232323]" : ""
+      }`}>
       <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
         <div className="w-40">
           <a href="/">

@@ -30,7 +30,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="h-screen" style={{ backgroundColor: "#F6F6F6" }}>
+    <div className="" style={{ backgroundColor: "#F6F6F6" }}>
       <h1
         className="text-center text-5xl pt-12 pb-16"
         style={{ color: "#711D1F" }}
@@ -38,25 +38,28 @@ const Products = () => {
         <b>Our</b> products
       </h1>
 
-      <div className="md:flex flex-row gap-24 place-content-center md:space-y-0 space-y-8">
-        {images.map((item) => (
-          <div className=" grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90">
+      <div className="md:flex flex-row gap-24 md:w-[90vw] w-[45vw] mx-auto md:space-y-0 space-y-12">
+        {images.map((item, index) => (
+          <div
+            key={index}
+            className=" grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
+          >
             <img
               className="md:max-h-16 max-h-12 inline object-contain  "
               src={require(`../assets/images/${item.img}`)}
               alt={item.alt}
             />
-            <h1 className="text-center text-xl ">{item.heading}</h1>
+            <h1 className=" text-center md:text-xl text-md ">{item.heading}</h1>
           </div>
         ))}
       </div>
 
-      <div className="w-[85vw] mx-auto pt-20">
+      <div className="w-[85vw] mx-auto md:pt-20 pt-12">
         <h1 className="text-4xl font-bold">Contact Us</h1>
 
         <div className="md:grid md:grid-cols-2 gap-12 pt-8">
           <div className="mb-5">
-            <label for="" className="block mb-2 text-sm">
+            <label htmlFor="" className="block mb-2 text-sm">
               Full Name
             </label>
             <input
@@ -69,7 +72,7 @@ const Products = () => {
           </div>
 
           <div className="mb-5">
-            <label for="" className="block mb-2 text-sm">
+            <label htmlFor="" className="block mb-2 text-sm">
               Country
             </label>
             <input
@@ -84,7 +87,7 @@ const Products = () => {
 
         <div className="md:grid md:grid-cols-2 gap-12">
           <div className="mb-5">
-            <label for="email" className="block mb-2 text-sm">
+            <label htmlFor="email" className="block mb-2 text-sm">
               Email
             </label>
             <input
@@ -97,7 +100,7 @@ const Products = () => {
           </div>
 
           <div className="mb-5">
-            <label for="" className="block mb-2 text-sm">
+            <label htmlFor="" className="block mb-2 text-sm">
               Contact
             </label>
             <input
@@ -112,7 +115,7 @@ const Products = () => {
 
         <div className="grid md:grid-cols-2 md:gap-6">
           <div className="mb-5">
-            <label for="message" className="block mb-2 text-sm ">
+            <label htmlFor="message" className="block mb-2 text-sm ">
               Message
             </label>
             <textarea
@@ -125,9 +128,18 @@ const Products = () => {
           </div>
         </div>
 
-        <button className="bg-transparent rounded-md py-2  px-6 border border-black">
+        <button className="bg-transparent rounded-md py-2  px-6 border border-black mb-12">
           Submit
         </button>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.59720814210306!2d103.857979!3d1.3086513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19e1d186e02d%3A0x2242714927df7e83!2sJalan%20Besar%20Plaza!5e0!3m2!1sen!2snp!4v1708320121399!5m2!1sen!2snp"
+          height="300"
+          style={{ width: "85vw", paddingBottom: "30px" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </div>
     </div>
   );

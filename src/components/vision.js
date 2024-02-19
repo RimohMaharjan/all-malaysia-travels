@@ -5,7 +5,7 @@ const Vision = () => {
   return (
     <div style={{ backgroundImage: `url(${bgImg})` }}>
       <div className="md:grid grid-cols-3 place-items-center h-screen">
-        <div className="text-white text-center border-l-8 p-4">
+        <div className="text-white text-center border-l-8 p-4 md:pt-0 pt-12">
           <h1 className="md:text-5xl text-3xl font-bold mb-4">Your Vision,</h1>
           <p className="md:text-5xl text-3xl pb-4">Our Mission</p>
         </div>

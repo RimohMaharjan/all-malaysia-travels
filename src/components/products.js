@@ -38,7 +38,7 @@ const Products = () => {
         <b>Our</b> products
       </h1>
 
-      <div className="md:flex flex-row gap-24 md:w-[90vw] w-[45vw] mx-auto md:space-y-0 space-y-12">
+      <div className="md:flex flex-row gap-24 md:w-[70vw] w-[45vw] mx-auto md:space-y-0 space-y-12">
         {images.map((item, index) => (
           <div
             key={index}
@@ -49,7 +49,7 @@ const Products = () => {
               src={require(`../assets/images/${item.img}`)}
               alt={item.alt}
             />
-            <h1 className=" text-center md:text-xl text-md ">{item.heading}</h1>
+            <h1 className=" text-center md:text-xl text-md font-medium ">{item.heading}</h1>
           </div>
         ))}
       </div>

@@ -12,10 +12,10 @@ const HomePage = () => {
           <h1 className="md:text-7xl text-3xl text-white font-bold mb-4">
             Welcome to Chariot
           </h1>
-          <p className="md:text-3xl text-lg text-white   pb-4">
+          <p className="md:text-3xl text-lg text-white font-light  pb-4">
             Where dream meets destinations
           </p>
-          <button className="md:text-lg text-md bg-transparent hover:black text-white hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">
+          <button className="md:text-lg text-md font-medium bg-transparent hover:black text-white hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">
             Our Services
           </button>
         </div>

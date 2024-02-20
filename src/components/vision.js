@@ -6,12 +6,12 @@ const Vision = () => {
     <div style={{ backgroundImage: `url(${bgImg})` }}>
       <div className="md:grid grid-cols-3 place-items-center h-screen">
         <div className="text-white text-center border-l-8 p-4 md:pt-0 pt-12">
-          <h1 className="md:text-5xl text-3xl font-bold mb-4">Your Vision,</h1>
-          <p className="md:text-5xl text-3xl pb-4">Our Mission</p>
+          <h1 className="md:text-5xl text-3xl font-medium mb-4">Your Vision,</h1>
+          <p className="md:text-5xl font-extralight text-3xl pb-4">Our Mission</p>
         </div>
 
         <div className="col-span-2 ">
-          <div className="md:grid grid-cols-2 grid-rows-2 gap-32 w-[57vw] mx-auto md:space-y-0 space-y-16">
+          <div className="md:grid grid-cols-2 grid-rows-2 gap-32 w-[57vw] mx-auto md:space-y-0 space-y-16 font-extralight">
             <div className="text-white">
               <div className="flex items-center gap-4">
                 <h1 className="md:text-7xl text-5xl">01</h1>

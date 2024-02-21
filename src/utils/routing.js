@@ -9,7 +9,6 @@ import Playground from "../pages/playground/playground";
 // import NotFound from "../pages/notFound";
 
 import ToTop from "./scrollToTop";
-import MultipleItems from "../components/scroll";
 
 const Routing = () => {
   return (
@@ -20,7 +19,6 @@ const Routing = () => {
         <Route exact path="/" element={<Home />} />
 
         <Route exact path="/playground" element={<Playground />} />
-        <Route exact path="/scroll" element={<MultipleItems />} />
 
         {/* default routes for invalid links */}
         {/* <Route path="*" element={<NotFound />} /> */}

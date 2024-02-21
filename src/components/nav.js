@@ -22,7 +22,7 @@ const Nav = () => {
         color ? "shadow-lg bg-[#F6F6F6]" : ""
       }`}
     >
-      <div className="max-w-screen-2xl mx-auto flex items-center justify-between">
+      <div className="max-w-screen-2xl  mx-auto flex items-center justify-between">
         <div className="w-40">
           <a href="/">
             <img
@@ -35,16 +35,25 @@ const Nav = () => {
             />
           </a>
         </div>
-        
-        <div className=" space-x-12 text-black hidden lg:block">
+
+        <div
+          className={`space-x-12 hidden lg:block ${
+            color ? "text-black" : "text-white"
+          }`}
+        >
           <a href="/">Home</a>
           <a href="!#">About Us</a>
           <a href="/clients">Services</a>
           <a href="!#">Representation</a>
           <a href="!#">Contact</a>
         </div>
-       
-        <button onClick={toggleMenu} className="text-3xl text-white block lg:hidden">
+
+        <button
+          onClick={toggleMenu}
+          className={`text-3xl block lg:hidden ${
+            color ? "text-black" : "text-white"
+          }`}
+        >
           <IoMenuOutline />
         </button>
       </div>

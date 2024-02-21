@@ -5,10 +5,17 @@ import About from '../components/about'
 import Vision from '../components/vision'
 import Products from '../components/products'
 import Footer from '../components/footer'
+import { useRef } from "react";
+import useScrollSnap from "react-use-scroll-snap";
 
 const Home = () => {
+
+    const scrollRef = useRef(null);
+  useScrollSnap({ ref: scrollRef, duration: 50, delay: 20 });
+
   return (
-    <div>
+      
+    <div ref={scrollRef} >
       <Nav />
       <HomePage />
       <About />

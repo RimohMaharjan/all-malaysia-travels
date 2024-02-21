@@ -32,7 +32,7 @@ const Products = () => {
   return (
     <div className="" style={{ backgroundColor: "#F6F6F6" }}>
       <h1
-        className="text-center text-5xl pt-12 pb-16"
+        className="text-center md:text-5xl text-3xl pt-12 pb-16"
         style={{ color: "#711D1F" }}
       >
         <b>Our</b> products

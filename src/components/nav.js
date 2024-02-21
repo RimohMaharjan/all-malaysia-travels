@@ -36,15 +36,15 @@ const Nav = () => {
           </a>
         </div>
         
-        {/* <div className=" space-x-12 text-black ">
+        <div className=" space-x-12 text-black hidden lg:block">
           <a href="/">Home</a>
           <a href="!#">About Us</a>
           <a href="/clients">Services</a>
           <a href="!#">Representation</a>
           <a href="!#">Contact</a>
-        </div> */}
+        </div>
        
-        <button onClick={toggleMenu} className={`text-3xl  ${ color ? "text-black" : "text-white" }`}>
+        <button onClick={toggleMenu} className="text-3xl text-white block lg:hidden">
           <IoMenuOutline />
         </button>
       </div>

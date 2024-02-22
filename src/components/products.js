@@ -35,7 +35,7 @@ const Products = () => {
         className="text-center md:text-5xl text-3xl pt-12 pb-16"
         style={{ color: "#711D1F" }}
       >
-        <b>Our</b> products
+        <b>Our</b> productss
       </h1>
 
       <div className="md:flex flex-row gap-24 md:w-[70vw] w-[45vw] mx-auto md:space-y-0 space-y-12">

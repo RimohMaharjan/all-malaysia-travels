@@ -33,9 +33,9 @@ const Products = () => {
     <div className="" style={{ backgroundColor: "#F6F6F6" }}>
       <h1
         className="text-center md:text-5xl text-3xl pt-12 pb-16"
-        style={{ color: "#711D1F" }}
+        style={{ color: "#711D1F"}}
       >
-        <b>Our</b> productss
+        <b>Our</b> products
       </h1>
 
       <div className="md:flex flex-row gap-24 md:w-[70vw] w-[45vw] mx-auto md:space-y-0 space-y-12">

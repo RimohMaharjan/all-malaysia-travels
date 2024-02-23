@@ -21,7 +21,7 @@ const Vision = () => {
     {
       number: "04",
       heading: "Services",
-      description: "“Chariot also excels at other services such as Charters and reimetance.”",
+      description: "“Chariot also excels at other services such as Charters and remittance.”",
     },
   ];
 
@@ -45,12 +45,12 @@ const Vision = () => {
                   <div className="flex items-center gap-4">
                     <h1 className="md:text-7xl text-5xl">{item.number}</h1>
                     <div>
-                      <p className="md:text-3xl text-md border-b p-2">
+                      <p className="md:text-3xl text-xl border-b p-2">
                         {item.heading}
                       </p>
                     </div>
                   </div>
-                  <h1 className="md:text-md text-sm">{item.description}</h1>
+                  <h1 className="md:text-lg text-md">{item.description}</h1>
                 </div>
               </>
             ))}

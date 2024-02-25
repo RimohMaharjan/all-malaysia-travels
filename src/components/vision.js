@@ -1,29 +1,13 @@
 import React from "react";
 import bgImg from "../assets/images/vision.png";
+import { API_URL } from "../constants";
+import useFetch from "../utils/useFetch";
 
 const Vision = () => {
-  let texts = [
-    {
-      number: "01",
-      heading: "Values & purpose",
-      description: "“Where dreams meet destinations”",
-    },
-    {
-      number: "02",
-      heading: "Why us?",
-      description: "“Dedicated to crafting personalized experiences”",
-    },
-    {
-      number: "03",
-      heading: "What we do?",
-      description: "“Experienced travel specialists is here to turn your dreams into reality.”",
-    },
-    {
-      number: "04",
-      heading: "Services",
-      description: "“Chariot also excels at other services such as Charters and remittance.”",
-    },
-  ];
+
+  const { data: vision, error: vision_error } = useFetch(
+    `${API_URL}missions/`
+  );
 
   return (
     <div style={{ backgroundImage: `url(${bgImg})` }}>
@@ -38,15 +22,16 @@ const Vision = () => {
         </div>
 
         <div className="col-span-2 ">
+          {vision ? (
           <div className="md:grid grid-cols-2 grid-rows-2 gap-32 w-[57vw] mx-auto md:space-y-0 space-y-16 font-extralight">
-            {texts.map((item) => (
+            {vision.map((item) => (
               <>
                 <div className="text-white">
                   <div className="flex items-center gap-4">
-                    <h1 className="md:text-7xl text-5xl">{item.number}</h1>
+                    <h1 className="md:text-7xl text-5xl">{item.number_text}</h1>
                     <div>
                       <p className="md:text-3xl text-xl border-b p-2">
-                        {item.heading}
+                      {item.title}
                       </p>
                     </div>
                   </div>
@@ -55,6 +40,11 @@ const Vision = () => {
               </>
             ))}
           </div>
+          ) : vision_error ? (
+            <p className="text-center">{vision_error}</p>
+          ) : (
+            <p className="text-center">loading</p>
+          )}
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ const useFetch = (url) => {
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append(
       "Authorization",
-      "Basic " + window.btoa("ocdyv:Octacore@123")
+      "Basic " + window.btoa("druk:1234")
     );
     fetch(url, {
       headers: myHeaders,

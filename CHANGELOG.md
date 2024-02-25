@@ -43,6 +43,12 @@
 - `usage`: import { FiInstagram } from "react-icons/fi";
 - `link`: https://www.npmjs.com/package/react-icons
 
+### `DOTENV`
+
+- `installed`: npm i dotenv
+- `usage`: process.env.
+- `link`: https://www.npmjs.com/package/dotenv
+
 ### `Installation Warehouse`
 
 ```

@@ -1,33 +1,12 @@
 import React from "react";
+import { API_URL } from "../constants";
+import useFetch from "../utils/useFetch";
 
 const Products = () => {
-  let images = [
-    {
-      img: "chariot-gds.png",
-      alt: "gds",
-      heading: "Chariot GDS",
-    },
-    {
-      img: "chariot-remit.png",
-      alt: "remit",
-      heading: "Chariot Remit",
-    },
-    {
-      img: "chariot-charters.png",
-      alt: "charters",
-      heading: "Chariot Charters",
-    },
-    {
-      img: "tamicha.png",
-      alt: "tamicha",
-      heading: "Tamicha",
-    },
-    {
-      img: "drukair-holidays.png",
-      alt: "drukair",
-      heading: "Drukair Holidays",
-    },
-  ];
+
+  const { data: products, error: products_error } = useFetch(
+    `${API_URL}products/`
+  );
 
   return (
     <div className="" style={{ backgroundColor: "#F6F6F6" }}>
@@ -38,21 +17,26 @@ const Products = () => {
         <b>Our</b> products
       </h1>
 
+      {products ? (
       <div className="md:flex flex-row gap-24 md:w-[70vw] w-[45vw] mx-auto md:space-y-0 space-y-12">
-        {images.map((item, index) => (
+        {products.map((item, index) => (
           <div
             key={index}
             className=" grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
           >
             <img
               className="md:max-h-16 max-h-12 inline object-contain  "
-              src={require(`../assets/images/${item.img}`)}
-              alt={item.alt}
+              src={item.logo}
             />
-            <h1 className=" text-center md:text-xl text-md font-medium ">{item.heading}</h1>
+            <h1 className=" text-center md:text-xl text-md font-medium ">{item.name}</h1>
           </div>
         ))}
       </div>
+       ) : products_error ? (
+        <p className="text-center">{products_error}</p>
+      ) : (
+        <p className="text-center">loading</p>
+      )}
 
       <div className="w-[85vw] mx-auto md:pt-20 pt-12">
         <h1 className="text-4xl font-bold">Contact Us</h1>

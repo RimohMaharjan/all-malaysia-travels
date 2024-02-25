@@ -4,7 +4,7 @@ import bgImg from "../assets/images/home.png";
 const HomePage = () => {
   return (
     <div
-      className="bg-fixed bg-center bg-cover relative min-h-screen z-[-2]"
+      className="bg-fixed bg-center bg-cover  min-h-screen z-[-2]"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="table min-h-screen">
@@ -15,7 +15,7 @@ const HomePage = () => {
           <p className="md:text-3xl text-lg text-white font-light  pb-4">
             Where dream meets destinations
           </p>
-          <button className="md:text-lg text-md font-medium bg-transparent hover:black text-white hover:text-white py-2 px-4 border border-white hover:border-transparent rounded">
+          <button className="md:text-lg text-md font-medium text-white py-2 px-4 border rounded hover:bg-red-900 ">
             Our Services
           </button>
         </div>

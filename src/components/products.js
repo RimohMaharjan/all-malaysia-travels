@@ -128,7 +128,7 @@ const Products = () => {
           </div>
         </div>
 
-        <button className="bg-transparent rounded-md py-2  px-6 border border-black mb-12">
+        <button className="bg-transparent rounded-md py-2  px-6 border border-black mb-12  hover:bg-red-900 hover:text-white">
           Submit
         </button>
 

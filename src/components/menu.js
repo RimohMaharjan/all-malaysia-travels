@@ -20,12 +20,18 @@ function Menu() {
         </button>
       </div>
 
-    <div className="flex flex-col space-y-8 w-[80vw] mx-auto text-2xl pt-8">
+    <div className="flex flex-col space-y-8 w-[80vw] mx-auto text-3xl pt-8">
           <a href="/">Home</a>
           <a href="!#">About Us</a>
           <a href="/clients">Services</a>
           <a href="!#">Representation</a>
           <a href="!#">Contact</a>
+    </div>
+    
+    <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-md pt-40">
+    <h1>© 2024 Lorem Ipsem. All rights reserved.</h1>
+        <h1>Privacy Policy</h1>
+        <h1>Terms of Service</h1>
     </div>
 
     </div>

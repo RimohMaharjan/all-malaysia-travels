@@ -1,38 +1,50 @@
 import React from "react";
 import { API_URL } from "../constants";
 import useFetch from "../utils/useFetch";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Products = () => {
-
   const { data: products, error: products_error } = useFetch(
     `${API_URL}products/`
   );
+  const settings = {
+    className: "center",
+    centerMode: true,
+    infinite: true,
+    centerPadding: "60px",
+    slidesToShow: 5,
+    speed: 500,
+  };
 
   return (
     <div className="" style={{ backgroundColor: "#F6F6F6" }}>
       <h1
         className="text-center md:text-5xl text-3xl pt-12 pb-16"
-        style={{ color: "#711D1F"}}
+        style={{ color: "#711D1F" }}
       >
         <b>Our</b> products
       </h1>
 
       {products ? (
-      <div className="md:flex flex-row gap-24 md:w-[70vw] w-[45vw] mx-auto md:space-y-0 space-y-12">
-        {products.map((item, index) => (
-          <div
-            key={index}
-            className=" grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
-          >
-            <img
-              className="md:max-h-16 max-h-12 inline object-contain  "
-              src={item.logo}
-            />
-            <h1 className=" text-center md:text-xl text-md font-medium ">{item.name}</h1>
-          </div>
-        ))}
-      </div>
-       ) : products_error ? (
+        <Slider {...settings}>
+          {products.map((item, index) => (
+            <div
+              key={index}
+              className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
+            >
+              <img
+                className="md:max-h-16 max-h-12 inline object-contain mx-auto "
+                src={item.logo}
+              />
+              <h1 className=" text-center md:text-xl text-md font-medium ">
+                {item.name}
+              </h1>
+            </div>
+          ))}
+        </Slider>
+      ) : products_error ? (
         <p className="text-center">{products_error}</p>
       ) : (
         <p className="text-center">loading</p>

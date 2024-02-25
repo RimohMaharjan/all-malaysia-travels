@@ -1,5 +1,4 @@
 import React from 'react'
-import Nav from '../components/nav'
 import HomePage from '../components/homePage'
 import About from '../components/about'
 import Vision from '../components/vision'
@@ -16,7 +15,7 @@ const Home = () => {
   return (
       
     <div ref={scrollRef} >
-      <Nav />
+    
       <HomePage />
       <About />
       <Vision />

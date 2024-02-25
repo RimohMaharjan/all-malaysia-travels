@@ -43,9 +43,10 @@ const Nav = () => {
         >
           <a href="/">Home</a>
           <a href="!#">About Us</a>
-          <a href="/clients">Services</a>
+          <a href="/#">Vision</a>
           <a href="!#">Representation</a>
           <a href="!#">Contact</a>
+          <a href="/services">Services</a>
         </div>
 
         <button

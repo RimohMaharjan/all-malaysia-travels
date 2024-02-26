@@ -44,7 +44,7 @@ const Representation = () => {
   return (
     <div>
         <div className="max-w-screen-2xl mx-auto lg:grid grid-cols-3 gap-16 min-h-screen 2xl:px-0 md:px-10 px-5">
-          <div className="table md:pt-0 pt-[15vh]">
+          <div className="table md:pt-0 pt-[8vh]">
             <div className="md:table-cell align-middle text-red-900">
               <h1 className="md:text-6xl text-4xl font-bold">
                 Representation

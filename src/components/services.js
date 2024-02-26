@@ -19,6 +19,15 @@ const Services = () => {
         centerPadding: "60px",
         slidesToShow: 5,
         speed: 500,
+        responsive: [
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 2,
+            },
+          },
+        ],
       };
 
   return (

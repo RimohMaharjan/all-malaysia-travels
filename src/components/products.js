@@ -35,30 +35,29 @@ const Products = () => {
       >
         <b>Our</b> products
       </h1>
-
-      {products ? (
-        <Slider {...settings}>
-          {products.map((item, index) => (
-            <div
-              key={index}
-              className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
-            >
-              <img
-                className="md:max-h-16 max-h-12 inline object-contain mx-auto "
-                src={item.logo}
-              />
-              <h1 className=" text-center md:text-xl text-md font-medium ">
-                {item.name}
-              </h1>
-            </div>
-          ))}
-        </Slider>
-      ) : products_error ? (
-        <p className="text-center">{products_error}</p>
-      ) : (
-        <p className="text-center">loading</p>
-      )}
-
+      <div className="overflow-x-hidden">
+        {products ? (
+          <Slider {...settings}>
+            {products.map((item, index) => (
+              <div
+                key={index}
+                className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
+              >
+                <a href={item.url}>
+                <img
+                  className="md:max-h-16 max-h-12 inline object-contain mx-auto "
+                  src={item.logo}
+                />
+                </a>
+              </div>
+            ))}
+          </Slider>
+        ) : products_error ? (
+          <p className="text-center">{products_error}</p>
+        ) : (
+          <p className="text-center">loading</p>
+        )}
+      </div>
       <div className="w-[85vw] mx-auto md:pt-20 pt-12">
         <h1 className="text-4xl font-bold">Contact Us</h1>
 

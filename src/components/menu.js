@@ -42,12 +42,12 @@ function Menu() {
         <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-md pt-40">
           {footer && (
             <>
-              <a className={`md:text-md text-xs`} href={`tel: ${footer[2].description}`}>
+              <a className={` text-md`} href={`tel: ${footer[2].description}`}>
                 <FaPhoneAlt className="inline mr-2" />
                 {footer[2].description}
               </a>
               <a
-                className={`md:text-md text-xs`}
+                className={`text-md `}
                 href={footer[5].description}
                 target="_blank"
                 rel="noreferrer"
@@ -56,7 +56,7 @@ function Menu() {
                 {footer[4].description}
               </a>
               <a
-                className={`md:text-md text-xs`}
+                className={`text-md`}
                 href={`mailto: ${footer[3].description}`}
               >
                 <IoIosMail className="inline mr-2" />

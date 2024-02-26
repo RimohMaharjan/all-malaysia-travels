@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
 
       {footer ? (
-        <div className="md:flex  gap-20">
+        <div className="md:flex hidden lg:block gap-20">
           {footer && (
             <>
               <a className={`md:text-md text-xs`} href={`tel: ${footer[2].description}`}>

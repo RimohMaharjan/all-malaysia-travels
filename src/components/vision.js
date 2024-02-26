@@ -9,7 +9,7 @@ const Vision = () => {
   return (
     <div className="bg-no-repeat" style={{ backgroundImage: `url(${bgImg})` }}>
       <div className="md:grid grid-cols-3 place-items-center h-screen">
-        <div className="text-white text-center border-l-8 p-4 md:pt-0 pt-12">
+        <div className="text-white text-center md:border-l-8 p-4 md:pt-0 pt-12">
           <h1 className="md:text-5xl text-3xl font-medium mb-4">
             Your Vision,
           </h1>

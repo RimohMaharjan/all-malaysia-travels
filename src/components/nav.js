@@ -19,7 +19,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`fixed w-screen bg-transparent-600 p-6 z-20 ${
+      className={`fixed w-screen bg-transparent-600 p-6 md:px-20 px-4 z-20 ${
         color ? "shadow-lg bg-[#F6F6F6]" : ""
       }`}
     >
@@ -38,15 +38,13 @@ const Nav = () => {
         </div>
 
         <div
-          className={`hidden lg:block ${
-            color ? "text-black" : "text-white"
-          }`}
+          className={`hidden lg:block ${color ? "text-black" : "text-white"}`}
         >
           <ul className="flex space-x-12">
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="!#">About Us</Link>
             </li>
             <li>
@@ -57,12 +55,11 @@ const Nav = () => {
             </li>
             <li>
               <Link to="!#">Contact</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="/services">Services</Link>
             </li>
           </ul>
-          
         </div>
 
         <button

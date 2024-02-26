@@ -1,7 +1,26 @@
 import React from "react";
 import bgImg from "../assets/images/services.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { API_URL } from "../constants";
+import useFetch from "../utils/useFetch";
 
 const Services = () => {
+
+    const { data: products, error: products_error } = useFetch(
+        `${API_URL}products/`
+      );
+
+    const settings = {
+        className: "center",
+        centerMode: true,
+        infinite: true,
+        centerPadding: "60px",
+        slidesToShow: 5,
+        speed: 500,
+      };
+
   return (
     <div>
       <div
@@ -22,6 +41,27 @@ const Services = () => {
           seamless business travel, our range of services is designed to elevate
           your experience and create lasting memories.
         </p>
+
+        {products ? (
+        <Slider {...settings}>
+          {products.map((item, index) => (
+            <div
+              key={index}
+              className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
+            >
+              <img
+                className="md:max-h-16 max-h-12 inline object-contain mx-auto "
+                src={item.logo}
+              />
+            </div>
+          ))}
+        </Slider>
+      ) : products_error ? (
+        <p className="text-center">{products_error}</p>
+      ) : (
+        <p className="text-center">loading</p>
+      )}
+
         <p className="md:text-3xl text-xl border-b p-2" style={{borderBlockColor: "#D9D9D9"}}></p>
       </div>
     </div>

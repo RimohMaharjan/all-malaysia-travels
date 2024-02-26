@@ -19,15 +19,6 @@ const Services = () => {
         centerPadding: "60px",
         slidesToShow: 5,
         speed: 500,
-        responsive: [
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 2,
-            },
-          },
-        ],
       };
 
   return (
@@ -36,7 +27,7 @@ const Services = () => {
         className="bg-fixed bg-center bg-cover h-64 z-[-2]"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <h1 className="text-center pt-44 md:text-5xl text-3xl text-white">Our services</h1>
+        <h1 className="text-center pt-44 text-5xl text-white">Our services</h1>
       </div>
       <div className="w-[85vw] mx-auto pt-20 space-y-8 text-red-900">
         <h1 className="text-4xl font-bold">Hotel</h1>

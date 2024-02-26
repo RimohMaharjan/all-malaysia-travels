@@ -7,7 +7,7 @@ const Vision = () => {
   const { data: vision, error: vision_error } = useFetch(`${API_URL}missions/`);
 
   return (
-    <div style={{ backgroundImage: `url(${bgImg})` }}>
+    <div className="bg-no-repeat" style={{ backgroundImage: `url(${bgImg})` }}>
       <div className="md:grid grid-cols-3 place-items-center h-screen">
         <div className="text-white text-center border-l-8 p-4 md:pt-0 pt-12">
           <h1 className="md:text-5xl text-3xl font-medium mb-4">

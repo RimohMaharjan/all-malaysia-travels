@@ -6,6 +6,7 @@ import Products from '../components/products'
 import Footer from '../components/footer'
 import { useRef } from "react";
 import useScrollSnap from "react-use-scroll-snap";
+import Representation from '../components/representation'
 
 const Home = () => {
 
@@ -19,6 +20,7 @@ const Home = () => {
       <HomePage />
       <About />
       <Vision />
+      <Representation />
       <Products />
       <Footer />
     </div>

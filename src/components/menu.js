@@ -4,8 +4,14 @@ import { RxCross1 } from "react-icons/rx";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
+import { API_URL } from "../constants";
+import useFetch from "../utils/useFetch";
 
 function Menu() {
+  const { data: footer, error: footer_error } = useFetch(
+    `${API_URL}home-page-data/`
+  );
+
   const { closeMenu } = useContext(MenuContext);
   return (
     <div>
@@ -23,35 +29,47 @@ function Menu() {
         </button>
       </div>
 
-    <div className="flex flex-col space-y-8 w-[80vw] mx-auto text-3xl pt-8">
-          <a href="/">Home</a>
-          <a href="!#">About Us</a>
-          <a href="!#">Vision</a>
-          <a href="!#">Representation</a>
-          <a href="!#">Contact</a>
-          <a href="/services">Services</a>
-    </div>
-    
-    <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-md pt-40">
-    <a className={`text-md`} href={`tel: (+65) 6388 8883`}>
-          <FaPhoneAlt className="inline mr-2" />
-          (+65) 6388 8883
-        </a>
-        <a
-          className={`text-md`}
-          href={`https://www.google.com/maps/dir//101+Kitchener+Rd,+Singapore+208511/@1.3087183,103.8579379,20z/data=!4m8!4m7!1m0!1m5!1m1!1s0x31da19e1d186e02d:0x2242714927df7e83!2m2!1d103.8580162!2d1.3087498?entry=ttu`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <IoLocationSharp className="inline mr-2" />
-          101 Kitchener Road #03-38 Jalan Besar Plaza, Singapore 208511,
-        </a>
-        <a className={`text-md`} href={`mailto: enquiry@chariot.com.sg`}>
-          <IoIosMail className="inline mr-2" />
-          enquiry@chariot.com.sg
-        </a>
-    </div>
+      <div className="flex flex-col space-y-8 w-[80vw] mx-auto text-3xl pt-8">
+        <a href="/">Home</a>
+        <a href="!#">About Us</a>
+        <a href="!#">Vision</a>
+        <a href="!#">Representation</a>
+        <a href="!#">Contact</a>
+        <a href="/services">Services</a>
+      </div>
 
+      {footer ? (
+        <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-md pt-40">
+          {footer && (
+            <>
+              <a className={`md:text-md text-xs`} href={`tel: ${footer[2].description}`}>
+                <FaPhoneAlt className="inline mr-2" />
+                {footer[2].description}
+              </a>
+              <a
+                className={`md:text-md text-xs`}
+                href={footer[5].description}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <IoLocationSharp className="inline mr-2" />
+                {footer[4].description}
+              </a>
+              <a
+                className={`md:text-md text-xs`}
+                href={`mailto: ${footer[3].description}`}
+              >
+                <IoIosMail className="inline mr-2" />
+                {footer[3].description}
+              </a>
+            </>
+          )}
+        </div>
+      ) : footer_error ? (
+        <p className="text-center">{footer_error}</p>
+      ) : (
+        <p className="text-center">loading</p>
+      )}
     </div>
   );
 }

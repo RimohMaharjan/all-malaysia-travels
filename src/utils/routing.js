@@ -11,6 +11,7 @@ import Playground from "../pages/playground/playground";
 import ToTop from "./scrollToTop";
 import Services from "../components/services";
 import Nav from "../components/nav";
+import Banner from "../components/banner";
 
 const Routing = () => {
   return (
@@ -21,7 +22,7 @@ const Routing = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/services" element={<Services />} />
-      
+        <Route exact path="/banner" element={<Banner />} />
         <Route exact path="/playground" element={<Playground />} />
 
         {/* default routes for invalid links */}

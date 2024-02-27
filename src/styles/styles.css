@@ -8,3 +8,11 @@
   --white: #fafafa;
   --black: #0d0d0f;
 }
+
+.slick-next {
+  right: 62px;
+}
+
+.slick-prev {
+  left: 35px;
+}

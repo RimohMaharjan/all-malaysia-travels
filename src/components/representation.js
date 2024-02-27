@@ -13,20 +13,24 @@ const Representation = () => {
         <div className="md:table-cell align-middle text-red-900 pt-12">
           <h1 className="md:text-6xl text-4xl font-bold">Representation</h1>
 
-          <p className="md:text-xl text-md pt-4">Our Valued Partners</p>
+          <p className="md:text-xl text-lg pt-4">Our Valued Partners</p>
         </div>
       </div>
 
       <div className="col-span-2 md:py-0 py-12 mx-auto table">
         <div className="table-cell md:align-middle align-top">
           {partners ? (
-            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-4 items-center justify-items-center">
+            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-4 items-center justify-items-end ">
               {partners.map((item) => (
+                <a href={item.url}
+                target="_blank"
+                rel="noreferrer">
                 <img
                   className="md:max-h-58 max-h-32 inline object-contain "
                   src={item.logo}
                   alt={item.alt}
                 />
+                </a>
               ))}
             </div>
           ) : partners_error ? (

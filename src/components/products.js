@@ -43,7 +43,9 @@ const Products = () => {
                 key={index}
                 className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
               >
-                <a href={item.url}>
+                <a href={item.url}
+                target="_blank"
+                rel="noreferrer">
                 <img
                   className="md:max-h-16 max-h-12 inline object-contain mx-auto "
                   src={item.logo}

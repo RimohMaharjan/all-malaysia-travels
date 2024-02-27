@@ -1,14 +1,16 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { API_URL } from "../constants";
+import useFetch from "../utils/useFetch";
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "black" }}
+      style={{ ...style, display: "block" }}
       onClick={onClick}
     />
   );
@@ -19,7 +21,7 @@ function PrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "black" }}
+      style={{ ...style, display: "block" }}
       onClick={onClick}
     />
   );
@@ -36,19 +38,27 @@ const Banner = () => {
     prevArrow: <PrevArrow />,
   };
 
+  const { data: banner, error: banner_error } = useFetch(
+    `${API_URL}promotional-banners/`
+  );
+
   return (
-    <div className="slider-container">
-      <Slider {...settings}>
-        <div className="h-screen ">
-          <img src={require("../assets/images/about.png")} />
-        </div>
-        <div className="h-screen ">
-          <img src={require("../assets/images/about.png")} />
-        </div>
-        <div className="h-screen ">
-          <img src={require("../assets/images/about.png")} />
-        </div>
-      </Slider>
+    <div className="slider-container snap-always snap-start">
+      {banner ? (
+        <Slider {...settings}>
+          {banner.map((item) => (
+            <>
+              <div >
+                <img className="md:h-screen object-fill" src={item.image} alt="banner" />
+              </div>
+            </>
+          ))}
+        </Slider>
+      ) : banner_error ? (
+        <p className="text-center">{banner_error}</p>
+      ) : (
+        <p className="text-center">loading</p>
+      )}
     </div>
   );
 };

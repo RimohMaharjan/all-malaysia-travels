@@ -50,6 +50,7 @@ const Products = () => {
                   <img
                     className="md:max-h-16 max-h-12 inline object-contain mx-auto "
                     src={item.logo}
+                    alt="products"
                   />
                 </a>
               </div>

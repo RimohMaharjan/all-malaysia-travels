@@ -11,8 +11,19 @@
 
 .slick-next {
   right: 62px;
+  z-index: 10;
 }
 
 .slick-prev {
-  left: 35px;
+  left: 62px;
+  z-index: 10;
+  
+}
+
+.slick-dots{
+  bottom:30px
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 50px;
 }

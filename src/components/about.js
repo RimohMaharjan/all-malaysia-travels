@@ -24,8 +24,8 @@ const About = () => {
         )}
       </div>
 
-      <div className="place-items-end">
-        <img src={require("../assets/images/about.png")} />
+      <div >
+        <img src={require("../assets/images/about.png")} alt="about" />
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`fixed w-screen bg-transparent-600 p-6 md:px-20 px-4 z-20 ${
+      className={`fixed w-screen bg-transparent-600 p-6 md:px-32 px-4 z-20 ${
         color ? "shadow-lg bg-[#F6F6F6]" : ""
       }`}
     >

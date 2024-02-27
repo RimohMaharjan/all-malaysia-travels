@@ -20,16 +20,16 @@ const Representation = () => {
       <div className="col-span-2 md:py-0 py-12 mx-auto table">
         <div className="table-cell md:align-middle align-top">
           {partners ? (
-            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-4 items-center justify-items-end ">
+            <div className="grid md:grid-cols-3 grid-cols-2 md:gap-32 gap-4 items-center justify-items-end ">
               {partners.map((item) => (
-                <a href={item.url}
-                target="_blank"
+                <a href={item.url} 
+                target="_blank" 
                 rel="noreferrer">
-                <img
-                  className="md:max-h-58 max-h-32 inline object-contain "
-                  src={item.logo}
-                  alt={item.alt}
-                />
+                  <img
+                    className="md:max-h-58 max-h-32 inline object-contain "
+                    src={item.logo}
+                    alt={item.alt}
+                  />
                 </a>
               ))}
             </div>

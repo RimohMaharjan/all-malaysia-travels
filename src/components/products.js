@@ -29,7 +29,7 @@ const Products = () => {
 
   return (
     <div
-      className="snap-always snap-start pt-10"
+      className="snap-always snap-start md:pt-10 pt-0"
       style={{ backgroundColor: "#F6F6F6" }}
     >
       <h1
@@ -50,6 +50,7 @@ const Products = () => {
                   <img
                     className="md:max-h-16 max-h-12 inline object-contain mx-auto "
                     src={item.logo}
+                    alt="products"
                   />
                 </a>
               </div>

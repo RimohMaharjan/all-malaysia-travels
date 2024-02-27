@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div
-      className="h-screen snap-y snap-mandatory overflow-y-scroll"
+      className="md:h-screen md:snap-y md:snap-mandatory md:overflow-y-scroll"
       ref={scrollRef}
     >
       <HomePage />

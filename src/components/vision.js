@@ -8,11 +8,11 @@ const Vision = () => {
 
   return (
     <div
-      className="snap-always snap-start min-h-screen bg-no-repeat bg-cover"
+      className="snap-always snap-start md:min-h-screen bg-no-repeat bg-cover px-5 py-14"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="md:grid grid-cols-3 place-items-center h-screen">
-        <div className="text-white text-center md:border-l-8 p-4 md:pt-0 pt-12">
+      <div className="md:grid grid-cols-3 place-items-center md:h-screen">
+        <div className="text-white md:text-center md:border-l-8 py-4 md:pt-0">
           <h1 className="md:text-5xl text-3xl font-medium mb-4">
             Your Vision,
           </h1>
@@ -23,7 +23,7 @@ const Vision = () => {
 
         <div className="col-span-2 ">
           {vision ? (
-            <div className="md:grid grid-cols-2 grid-rows-2 gap-32 w-[57vw] mx-auto md:space-y-0 space-y-16 font-extralight">
+            <div className="md:grid grid-cols-2 grid-rows-2 gap-32 md:w-[57vw] md:mx-auto md:space-y-0 space-y-16 font-extralight">
               {vision.map((item) => (
                 <>
                   <div className="text-white">

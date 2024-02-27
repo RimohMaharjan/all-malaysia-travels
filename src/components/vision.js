@@ -8,11 +8,11 @@ const Vision = () => {
 
   return (
     <div
-      className="snap-always snap-start md:min-h-screen bg-no-repeat bg-cover px-5 py-14"
+      className="snap-always snap-start md:h-screen bg-no-repeat bg-cover px-5 py-14"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="md:grid grid-cols-3 place-items-center md:h-screen">
-        <div className="text-white md:text-center md:border-l-8 py-4 md:pt-0">
+        <div className="text-white md:text-center md:border-l-8 py-4 md:pt-0 pl-5">
           <h1 className="md:text-5xl text-3xl font-medium mb-4">
             Your Vision,
           </h1>

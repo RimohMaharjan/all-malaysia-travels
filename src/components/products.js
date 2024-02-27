@@ -65,80 +65,76 @@ const Products = () => {
       <div className="w-[85vw] mx-auto md:pt-20 pt-12">
         <h1 className="text-4xl font-bold">Contact Us</h1>
 
-        <div className="md:grid md:grid-cols-2 gap-12 pt-8">
-          <div className="mb-5">
-            <label htmlFor="" className="block mb-2 text-sm">
-              Full Name
-            </label>
-            <input
-              type="text"
-              id="text"
-              className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
-              placeholder="Enter your full name"
-              required
-            />
+        <form action="">
+          <div className="md:grid md:grid-cols-2 gap-12 pt-8">
+            <div className="mb-5">
+              <label htmlFor="" className="block mb-2 text-sm">
+                Full Name
+              </label>
+              <input
+                type="text"
+                id="text"
+                className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
+                placeholder="Enter your full name"
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="" className="block mb-2 text-sm">
+                Country
+              </label>
+              <input
+                type="text"
+                id="text"
+                className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
+                placeholder="Enter your country"
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="email" className="block mb-2 text-sm">
+                Email
+              </label>
+              <input
+                type="email"
+                id="email"
+                className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="" className="block mb-2 text-sm">
+                Contact
+              </label>
+              <input
+                type="number"
+                id=""
+                className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
+                placeholder="Enter your contact information"
+                required
+              />
+            </div>
+            <div className="mb-5">
+              <label htmlFor="message" className="block mb-2 text-sm ">
+                Message
+              </label>
+              <textarea
+                id="message"
+                rows="2"
+                className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+                placeholder=""
+              ></textarea>
+              <p className="text-xs">Max 500 characters</p>
+            </div>
           </div>
-
-          <div className="mb-5">
-            <label htmlFor="" className="block mb-2 text-sm">
-              Country
-            </label>
-            <input
-              type="text"
-              id="text"
-              className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
-              placeholder="Enter your country"
-              required
-            />
-          </div>
-        </div>
-
-        <div className="md:grid md:grid-cols-2 gap-12">
-          <div className="mb-5">
-            <label htmlFor="email" className="block mb-2 text-sm">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
-              placeholder="Enter your email"
-              required
-            />
-          </div>
-
-          <div className="mb-5">
-            <label htmlFor="" className="block mb-2 text-sm">
-              Contact
-            </label>
-            <input
-              type="number"
-              id=""
-              className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
-              placeholder="Enter your contact information"
-              required
-            />
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 md:gap-6">
-          <div className="mb-5">
-            <label htmlFor="message" className="block mb-2 text-sm ">
-              Message
-            </label>
-            <textarea
-              id="message"
-              rows="2"
-              className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
-              placeholder=""
-            ></textarea>
-            <p className="text-xs">Max 500 characters</p>
-          </div>
-        </div>
-
-        <button className="bg-transparent rounded-md py-2  px-6 border border-black mb-12  hover:bg-red-900 hover:text-white">
-          Submit
-        </button>
+          <button
+            type="submit"
+            className="bg-transparent rounded-md py-2 px-6 border border-black mb-12  hover:bg-red-900 hover:text-white"
+          >
+            Submit
+          </button>
+        </form>
 
         <iframe
           title="location"

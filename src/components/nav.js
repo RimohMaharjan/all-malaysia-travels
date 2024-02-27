@@ -56,9 +56,7 @@ const Nav = () => {
 
         <button
           onClick={toggleMenu}
-          className={`text-3xl block lg:hidden ${
-            color ? "text-black" : "text-white"
-          }`}
+          className={`text-3xl block lg:hidden text-black`}
         >
           <IoMenuOutline />
         </button>

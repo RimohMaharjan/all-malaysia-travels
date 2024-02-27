@@ -29,7 +29,7 @@ const Products = () => {
 
   return (
     <div
-      className="snap-always snap-start "
+      className="snap-always snap-start pt-10"
       style={{ backgroundColor: "#F6F6F6" }}
     >
       <h1

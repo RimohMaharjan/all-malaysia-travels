@@ -9,7 +9,7 @@ const About = () => {
   );
 
   return (
-    <div className="md:h-screen md:grid grid-cols-2 place-items-center gap-4">
+    <div className="snap-always snap-start min-h-screen md:grid grid-cols-2 place-items-center gap-4">
       <div
         className="flex flex-col justify-center text-black md:w-[35vw] w-[70vw] mx-auto"
         style={{ color: "#711D1F" }}

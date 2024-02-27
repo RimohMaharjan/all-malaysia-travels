@@ -8,7 +8,7 @@ const Representation = () => {
   );
 
   return (
-    <div className="max-w-screen-2xl mx-auto lg:grid grid-cols-3  md:min-h-screen 2xl:px-0 md:px-20 px-5">
+    <div className="snap-always snap-start max-w-screen-2xl mx-auto lg:grid grid-cols-3 md:min-h-screen 2xl:px-0 md:px-20 px-5">
       <div className="table">
         <div className="md:table-cell align-middle text-red-900 pt-12">
           <h1 className="md:text-6xl text-4xl font-bold">Representation</h1>

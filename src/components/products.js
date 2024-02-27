@@ -28,7 +28,10 @@ const Products = () => {
   };
 
   return (
-    <div className="" style={{ backgroundColor: "#F6F6F6" }}>
+    <div
+      className="snap-always snap-start "
+      style={{ backgroundColor: "#F6F6F6" }}
+    >
       <h1
         className="text-center md:text-5xl text-3xl pt-20 pb-16"
         style={{ color: "#711D1F" }}
@@ -43,13 +46,11 @@ const Products = () => {
                 key={index}
                 className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
               >
-                <a href={item.url}
-                target="_blank"
-                rel="noreferrer">
-                <img
-                  className="md:max-h-16 max-h-12 inline object-contain mx-auto "
-                  src={item.logo}
-                />
+                <a href={item.url} target="_blank" rel="noreferrer">
+                  <img
+                    className="md:max-h-16 max-h-12 inline object-contain mx-auto "
+                    src={item.logo}
+                  />
                 </a>
               </div>
             ))}
@@ -127,7 +128,7 @@ const Products = () => {
             <textarea
               id="message"
               rows="2"
-              className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
               placeholder=""
             ></textarea>
             <p className="text-xs">Max 500 characters</p>
@@ -139,6 +140,7 @@ const Products = () => {
         </button>
 
         <iframe
+          title="location"
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.59720814210306!2d103.857979!3d1.3086513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19e1d186e02d%3A0x2242714927df7e83!2sJalan%20Besar%20Plaza!5e0!3m2!1sen!2snp!4v1708320121399!5m2!1sen!2snp"
           height="300"
           style={{ width: "85vw", paddingBottom: "30px" }}

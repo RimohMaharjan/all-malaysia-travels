@@ -22,8 +22,8 @@ const Services = () => {
     },
   ];
 
-  const { data: products, error: products_error } = useFetch(
-    `${API_URL}products/`
+  const { data: services, error: services_error } = useFetch(
+    `${API_URL}services/`
   );
 
   const settings = {
@@ -53,38 +53,40 @@ const Services = () => {
         <h1 className="text-center pt-44 text-5xl text-white">Our services</h1>
       </div>
 
-      {texts.map((item) => (
+      {services ? (
         <div
           className="w-[85vw] mx-auto pt-20 space-y-8 text-red-900 border-b pb-10"
           style={{ borderBlockColor: "#D9D9D9" }}
         >
-          <h1 className="text-4xl font-bold">{item.heading}</h1>
-          <p className="font-light">{item.text}</p>
-          {products ? (
-            <Slider {...settings}>
-              {products.map((item, index) => (
+          {services.map((item, index) => (
+            <>
+              <h1 className="text-4xl font-bold">{item.title}</h1>
+              <p className="font-light">{item.description}</p>
+
+              <Slider {...settings}>
                 <div
                   key={index}
                   className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
                 >
-                  <a href={item.url}
-                target="_blank"
-                rel="noreferrer">
-                  <img
-                    className="md:max-h-16 max-h-12 inline object-contain mx-auto "
-                    src={item.logo}
-                  />
-                  </a>
+                  {item.service_images.map((service, index) => (
+                    <a href={service.url} target="_blank" rel="noreferrer">
+                      <img
+                        className="md:max-h-16 max-h-12 inline object-contain mx-auto "
+                        src={service.image}
+                        alt="services"
+                      />
+                    </a>
+                  ))}
                 </div>
-              ))}
-            </Slider>
-          ) : products_error ? (
-            <p className="text-center">{products_error}</p>
-          ) : (
-            <p className="text-center">loading</p>
-          )}
+              </Slider>
+            </>
+          ))}
         </div>
-      ))}
+      ) : services_error ? (
+        <p className="text-center">{services_error}</p>
+      ) : (
+        <p className="text-center">loading</p>
+      )}
     </div>
   );
 };

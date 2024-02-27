@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <div
-      className="snap-always snap-start p-8 text-white flex place-content-center items-end"
+      className="p-8 text-white flex place-content-center items-end"
       style={{ backgroundColor: "#393939" }}
     >
       <div className=" md:text-xs text-md md:pr-16 pr-0 ">

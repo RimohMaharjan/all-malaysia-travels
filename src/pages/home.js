@@ -20,7 +20,9 @@ const Home = () => {
       <Vision />
       <Representation />
       <Products />
-      <Footer />
+      <div className="snap-always snap-start">
+        <Footer />
+      </div>
     </div>
   );
 };

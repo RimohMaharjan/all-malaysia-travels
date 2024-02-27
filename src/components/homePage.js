@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const HomePage = () => {
   return (
     <div
-      className="bg-fixed bg-center bg-cover  min-h-screen z-[-2]"
+      className="snap-always snap-start bg-fixed bg-center bg-cover min-h-screen z-[-2]"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="table min-h-screen">

@@ -1,22 +1,20 @@
-import React from 'react'
-import HomePage from '../components/homePage'
-import About from '../components/about'
-import Vision from '../components/vision'
-import Products from '../components/products'
-import Footer from '../components/footer'
+import React from "react";
+import HomePage from "../components/homePage";
+import About from "../components/about";
+import Vision from "../components/vision";
+import Products from "../components/products";
+import Footer from "../components/footer";
 import { useRef } from "react";
-import useScrollSnap from "react-use-scroll-snap";
-import Representation from '../components/representation'
+import Representation from "../components/representation";
 
 const Home = () => {
-
-    const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 50, delay: 20 });
+  const scrollRef = useRef(null);
 
   return (
-      
-    <div ref={scrollRef} >
-    
+    <div
+      className="h-screen snap-y snap-mandatory overflow-y-scroll"
+      ref={scrollRef}
+    >
       <HomePage />
       <About />
       <Vision />
@@ -24,7 +22,7 @@ const Home = () => {
       <Products />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

@@ -6,11 +6,13 @@ import { API_URL } from "../constants";
 import useFetch from "../utils/useFetch";
 
 const Footer = () => {
-  const { data: footer, error: footer_error } = useFetch(`${API_URL}home-page-data/`);
+  const { data: footer, error: footer_error } = useFetch(
+    `${API_URL}home-page-data/`
+  );
 
   return (
     <div
-      className="p-8 text-white flex place-content-center items-end"
+      className="snap-always snap-start p-8 text-white flex place-content-center items-end"
       style={{ backgroundColor: "#393939" }}
     >
       <div className=" md:text-xs text-md md:pr-16 pr-0 ">
@@ -21,7 +23,10 @@ const Footer = () => {
         <div className="md:flex hidden gap-20">
           {footer && (
             <>
-              <a className={`md:text-md text-xs`} href={`tel: ${footer[2].description}`}>
+              <a
+                className={`md:text-md text-xs`}
+                href={`tel: ${footer[2].description}`}
+              >
                 <FaPhoneAlt className="inline mr-2" />
                 {footer[2].description}
               </a>

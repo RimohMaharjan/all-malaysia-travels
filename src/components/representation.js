@@ -8,7 +8,7 @@ const Representation = () => {
   );
 
   return (
-    <div className="max-w-screen-2xl mx-auto lg:grid grid-cols-3  md:min-h-screen 2xl:px-0 md:px-20 px-5">
+    <div className="snap-always snap-start max-w-screen-2xl mx-auto lg:grid grid-cols-3 md:min-h-screen 2xl:px-0 md:px-20 px-5">
       <div className="table">
         <div className="md:table-cell align-middle text-red-900 pt-12">
           <h1 className="md:text-6xl text-4xl font-bold">Representation</h1>
@@ -22,14 +22,12 @@ const Representation = () => {
           {partners ? (
             <div className="grid md:grid-cols-3 grid-cols-2 md:gap-20 gap-4 items-center justify-items-end ">
               {partners.map((item) => (
-                <a href={item.url}
-                target="_blank"
-                rel="noreferrer">
-                <img
-                  className="md:max-h-58 max-h-32 inline object-contain "
-                  src={item.logo}
-                  alt={item.alt}
-                />
+                <a href={item.url} target="_blank" rel="noreferrer">
+                  <img
+                    className="md:max-h-58 max-h-32 inline object-contain "
+                    src={item.logo}
+                    alt={item.alt}
+                  />
                 </a>
               ))}
             </div>

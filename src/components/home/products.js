@@ -6,7 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ContactForm from "./contactForm";
 
-const Products = () => {
+const Products = ({ prodsRef }) => {
   const { data: products, error: products_error } = useFetch(
     `${API_URL}products/`
   );
@@ -37,6 +37,7 @@ const Products = () => {
 
   return (
     <div
+      ref={prodsRef}
       className="snap-always snap-start pt-10 px-5"
       style={{ backgroundColor: "#F6F6F6" }}
     >

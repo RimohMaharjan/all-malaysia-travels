@@ -4,24 +4,25 @@ import About from "../components/home/about";
 import Vision from "../components/home/vision";
 import Products from "../components/home/products";
 import Footer from "../components/general/footer";
-import { useRef } from "react";
 import Representation from "../components/home/representation";
 import Banner from "../components/home/banner";
 
-const Home = () => {
-  const scrollRef = useRef(null);
-
+const Home = ({
+  homeRef,
+  aboutRef,
+  visionRef,
+  repRef,
+  promotionRef,
+  prodsRef,
+}) => {
   return (
-    <div
-      className="md:h-screen md:snap-y md:snap-mandatory md:overflow-y-scroll"
-      ref={scrollRef}
-    >
-      <HomePage />
-      <About />
-      <Vision />
-      <Representation />
-      <Banner />
-      <Products />
+    <div className="md:h-screen md:snap-y md:snap-mandatory md:overflow-y-scroll">
+      <HomePage homeRef={homeRef} />
+      <About aboutRef={aboutRef} />
+      <Vision visionRef={visionRef} />
+      <Representation repRef={repRef} />
+      <Banner promotionRef={promotionRef} />
+      <Products prodsRef={prodsRef} />
       <div className="snap-always snap-start">
         <Footer />
       </div>

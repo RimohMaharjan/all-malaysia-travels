@@ -27,7 +27,7 @@ function PrevArrow(props) {
   );
 }
 
-const Banner = () => {
+const Banner = ({ promotionRef }) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -43,7 +43,7 @@ const Banner = () => {
   );
 
   return (
-    <div className="slider-container snap-always snap-start">
+    <div ref={promotionRef} className="slider-container snap-always snap-start">
       {banner ? (
         <Slider {...settings}>
           {banner.map((item) => (

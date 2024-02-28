@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React from "react";
+import React, { useRef } from "react";
 
 import Home from "../pages/home";
 
@@ -14,13 +14,40 @@ import Nav from "../components/general/nav";
 import Banner from "../components/home/banner";
 
 const Routing = () => {
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const visionRef = useRef(null);
+  const repRef = useRef(null);
+  const promotionRef = useRef(null);
+  const prodsRef = useRef(null);
+
   return (
     <Router>
-      <Nav />
+      <Nav
+        homeRef={homeRef}
+        aboutRef={aboutRef}
+        visionRef={visionRef}
+        repRef={repRef}
+        promotionRef={promotionRef}
+        prodsRef={prodsRef}
+      />
       <ToTop />
 
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route
+          exact
+          path="/"
+          element={
+            <Home
+              homeRef={homeRef}
+              aboutRef={aboutRef}
+              visionRef={visionRef}
+              repRef={repRef}
+              promotionRef={promotionRef}
+              prodsRef={prodsRef}
+            />
+          }
+        />
         <Route exact path="/services" element={<Services />} />
         <Route exact path="/banner" element={<Banner />} />
         <Route exact path="/playground" element={<Playground />} />

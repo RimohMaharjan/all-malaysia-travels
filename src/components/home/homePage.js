@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import { API_URL } from "../../constants";
 import useFetch from "../../utils/useFetch";
 
-const HomePage = () => {
+const HomePage = ({ homeRef }) => {
   // fetching data
   const { data } = useFetch(`${API_URL}home-page-data/`);
 
   return (
     <div
+      ref={homeRef}
       className="snap-always snap-start bg-fixed bg-center bg-cover min-h-screen z-[-2]"
       style={{ backgroundImage: `url(${bgImg})` }}
     >

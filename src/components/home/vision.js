@@ -3,11 +3,12 @@ import bgImg from "../../assets/images/vision.png";
 import { API_URL } from "../../constants";
 import useFetch from "../../utils/useFetch";
 
-const Vision = () => {
+const Vision = ({ visionRef }) => {
   const { data: vision, error: vision_error } = useFetch(`${API_URL}missions/`);
 
   return (
     <div
+      ref={visionRef}
       className="snap-always snap-start md:h-screen bg-no-repeat bg-cover px-5 py-14"
       style={{ backgroundImage: `url(${bgImg})` }}
     >

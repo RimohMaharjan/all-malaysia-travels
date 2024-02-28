@@ -8,9 +8,9 @@ const Representation = () => {
   );
 
   return (
-    <div className="snap-always snap-start max-w-screen-2xl mx-auto lg:grid grid-cols-3 md:min-h-screen 2xl:px-0 md:px-20 px-5">
+    <div className="snap-always snap-start max-w-screen-2xl mx-auto lg:grid grid-cols-3 md:min-h-screen 2xl:px-0 md:px-20 px-5 lg:pt-0 pt-32">
       <div className="table">
-        <div className="md:table-cell align-middle text-red-900 pt-12">
+        <div className="md:table-cell align-middle text-red-900">
           <h1 className="2xl:text-6xl xl:text-5xl text-4xl font-bold">
             Representation
           </h1>
@@ -18,26 +18,24 @@ const Representation = () => {
         </div>
       </div>
 
-      <div className="col-span-2 md:py-0 py-12 mx-auto table">
-        <div className="table-cell md:align-middle align-top">
-          {partners ? (
-            <div className="grid md:grid-cols-3 grid-cols-2 xl:gap-x-32 gap-4 items-center justify-items-center ">
-              {partners.map((item) => (
-                <a href={item.url} target="_blank" rel="noreferrer">
-                  <img
-                    className="inline object-contain md:h-auto h-32"
-                    src={item.logo}
-                    alt={item.alt}
-                  />
-                </a>
-              ))}
-            </div>
-          ) : partners_error ? (
-            <p className="text-center">{partners_error}</p>
-          ) : (
-            <p className="text-center">loading</p>
-          )}
-        </div>
+      <div className="lg:col-span-2 md:py-0 py-12 mx-auto grid md:place-content-center mt-10">
+        {partners ? (
+          <div className="grid md:grid-cols-3 grid-cols-2 xl:gap-x-32 lg:gap-x-5 md:gap-x-32 gap-5 items-center justify-items-center ">
+            {partners.map((item) => (
+              <a href={item.url} target="_blank" rel="noreferrer">
+                <img
+                  className="inline object-contain md:h-auto h-32"
+                  src={item.logo}
+                  alt={item.alt}
+                />
+              </a>
+            ))}
+          </div>
+        ) : partners_error ? (
+          <p className="text-center">{partners_error}</p>
+        ) : (
+          <p className="text-center">loading</p>
+        )}
       </div>
     </div>
   );

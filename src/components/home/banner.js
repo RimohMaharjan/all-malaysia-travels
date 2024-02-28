@@ -50,7 +50,7 @@ const Banner = () => {
             <>
               <div>
                 <img
-                  className="md:h-screen w-screen object-contain"
+                  className="md:h-screen w-screen xl:object-cover object-contain"
                   src={item.image}
                   alt="banner"
                 />

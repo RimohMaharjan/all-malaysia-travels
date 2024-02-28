@@ -41,7 +41,7 @@ const Products = () => {
       style={{ backgroundColor: "#F6F6F6" }}
     >
       <h1
-        className="md:text-center md:text-5xl text-3xl md:pt-20 pb-16"
+        className="md:text-center md:text-5xl text-4xl md:pt-20 pb-16"
         style={{ color: "#711D1F" }}
       >
         <b>Our</b> products

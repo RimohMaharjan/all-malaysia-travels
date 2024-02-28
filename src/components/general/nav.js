@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import { MenuContext } from "react-flexible-sliding-menu";
 import { IoMenuOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -6,16 +6,16 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   const { toggleMenu } = useContext(MenuContext);
 
-  const [color, setColor] = useState(false);
-  const changeColor = () => {
-    if (window.scrollY >= 10) {
-      setColor(true);
-    } else {
-      setColor(false);
-    }
-  };
+  // const [color, setColor] = useState(false);
+  // const changeColor = () => {
+  //   if (window.scrollY >= 10) {
+  //     setColor(true);
+  //   } else {
+  //     setColor(false);
+  //   }
+  // };
 
-  window.addEventListener("scroll", changeColor);
+  // window.addEventListener("scroll", changeColor);
 
   return (
     <nav
@@ -56,7 +56,7 @@ const Nav = () => {
 
         <button
           onClick={toggleMenu}
-          className={`text-3xl block lg:hidden text-black`}
+          className={`text-4xl block lg:hidden text-black`}
         >
           <IoMenuOutline />
         </button>

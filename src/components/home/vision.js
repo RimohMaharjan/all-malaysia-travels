@@ -12,18 +12,16 @@ const Vision = () => {
       style={{ backgroundImage: `url(${bgImg})` }}
     >
       <div className="md:grid grid-cols-3 place-items-center md:h-screen">
-        <div className="text-white md:text-center md:border-l-8 py-4 md:pt-0 pl-5">
-          <h1 className="md:text-5xl text-3xl font-medium mb-4">
+        <div className="text-white md:text-center md:border-l-8 py-5 md:pl-5">
+          <h1 className="lg:text-5xl text-4xl font-medium mb-4">
             Your Vision,
           </h1>
-          <p className="md:text-5xl font-extralight text-3xl pb-4">
-            Our Mission
-          </p>
+          <p className="lg:text-5xl text-4xl font-extralight">Our Mission</p>
         </div>
 
-        <div className="col-span-2 ">
+        <div className="col-span-2">
           {vision ? (
-            <div className="md:grid grid-cols-2 grid-rows-2 gap-32 md:w-[57vw] md:mx-auto md:space-y-0 space-y-16 font-extralight">
+            <div className="md:grid xl:grid-cols-2 grid-rows-2 2xl:gap-32 gap-10 md:w-[57vw] md:mx-auto md:space-y-0 space-y-16 font-extralight">
               {vision.map((item) => (
                 <>
                   <div className="text-white">
@@ -31,13 +29,15 @@ const Vision = () => {
                       <h1 className="md:text-7xl text-5xl">
                         {item.number_text}
                       </h1>
-                      <div>
-                        <p className="md:text-3xl text-xl border-b p-2">
+                      <div className="w-full">
+                        <p className="md:text-4xl text-xl border-b p-2">
                           {item.title}
                         </p>
+                        <h1 className="md:text-lg text-md p-2">
+                          {item.description}
+                        </h1>
                       </div>
                     </div>
-                    <h1 className="md:text-lg text-md">{item.description}</h1>
                   </div>
                 </>
               ))}

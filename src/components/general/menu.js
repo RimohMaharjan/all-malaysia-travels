@@ -29,7 +29,7 @@ function Menu() {
         </button>
       </div>
 
-      <div className="flex flex-col space-y-8 w-[80vw] mx-auto text-3xl pt-8">
+      <div className="flex flex-col space-y-8 w-[80vw] mx-auto text-4xl pt-8">
         <a href="/">Home</a>
         <a href="!#">About Us</a>
         <a href="!#">Vision</a>

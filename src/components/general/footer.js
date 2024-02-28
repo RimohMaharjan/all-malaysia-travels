@@ -10,13 +10,16 @@ const Footer = () => {
     `${API_URL}home-page-data/`
   );
 
+  const today = new Date();
+  const year = today.getFullYear();
+
   return (
     <div
       className="p-8 text-white flex place-content-center items-end"
       style={{ backgroundColor: "#393939" }}
     >
       <div className=" md:text-xs text-md md:pr-16 pr-0 ">
-        <h1>© 2024 | Chariot Travels | Developed by Octacore Solutions</h1>
+        <h1>© {year} | Chariot Travels | Developed by Octacore Solutions</h1>
       </div>
 
       {footer ? (

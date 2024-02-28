@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { API_URL } from "../../constants";
+import { ToastNotification } from "../../utils/toastNotification";
 
 const ContactForm = () => {
   const [countries, setCountries] = useState([]);
@@ -19,16 +20,33 @@ const ContactForm = () => {
     });
   }, []);
 
+  const reset = () => {
+    setFormData({
+      full_name: "",
+      country: "",
+      email: "",
+      contact_number: "",
+      message: "",
+    });
+  };
+
   const handleContactSubmit = (e) => {
     e.preventDefault();
     axios
       .post(`${API_URL}contact-form/`, formData)
       .then((res) => {
-        alert("Form submitted successfully");
+        ToastNotification.fire({
+          icon: "success",
+          title: "Successful!",
+        });
       })
       .catch((err) => {
-        alert("Form submission failed");
+        ToastNotification.fire({
+          icon: "warning",
+          title: "Failed!",
+        });
       });
+    reset();
   };
   return (
     <form onSubmit={handleContactSubmit}>
@@ -67,7 +85,9 @@ const ContactForm = () => {
             className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
             required
           >
-            <option value="">Select a country</option>
+            <option value="" disabled hidden selected>
+              Select a country
+            </option>
             {countries.map((country, index) => (
               <option key={index} value={country.value}>
                 {country.display_name}
@@ -127,7 +147,7 @@ const ContactForm = () => {
                 message: e.target.value,
               })
             }
-            className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500"
+            className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300"
             placeholder=""
           ></textarea>
           <p className="text-xs">Max 500 characters</p>

@@ -17,13 +17,22 @@
 .slick-prev {
   left: 62px;
   z-index: 10;
-  
 }
 
-.slick-dots{
-  bottom:30px
+.slick-dots {
+  bottom: 30px;
 }
 
-.slick-prev:before, .slick-next:before {
+.slick-prev:before,
+.slick-next:before {
   font-size: 50px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+:focus-visible {
+  outline: 0 !important;
 }

@@ -2,12 +2,16 @@
 
 - [Table of Contents](#table-of-contents)
 - [Versions](#versions)
-  - [`v1.0.0`](#v100)
-  - [`v1.0.1`](#v101)
+    - [`v1.0.0`](#v100)
+    - [`v1.0.1`](#v101)
 - [Installed](#installed)
-  - [`Routes`](#routes)
-  - [`Icons`](#icons)
-  - [`Installation Warehouse`](#installation-warehouse)
+    - [`Tailwindcss`](#tailwindcss)
+    - [`Routes`](#routes)
+    - [`Icons`](#icons)
+    - [`DOTENV`](#dotenv)
+    - [`Axios`](#axios)
+    - [`sweetalert2`](#sweetalert2)
+    - [`Installation Warehouse`](#installation-warehouse)
 - [Todo:](#todo)
 
 ---
@@ -49,6 +53,18 @@
 - `usage`: process.env.
 - `link`: https://www.npmjs.com/package/dotenv
 
+### `Axios`
+
+- `installed`: npm i axios
+- `usage`: import axios from 'axios';
+- `link`: https://www.npmjs.com/package/axios
+
+### `sweetalert2`
+
+- `installed`: npm i react-toastify sweetalert2-react-content
+- `usage`: import Swal from "sweetalert2"; import withReactContent from "sweetalert2-react-content";
+- `link`: https://fkhadra.github.io/react-toastify/installation/
+
 ### `Installation Warehouse`
 
 ```
@@ -85,12 +101,6 @@
 - `installed`: npm install react-slick slick-carousel
 - `usage`: import Slider from "react-slick"; import "~slick-carousel/slick/slick.css"; import "~slick-carousel/slick/slick-theme.css";
 - `link`: https://react-slick.neostack.com/docs/get-started
-
-### `Axios`
-
-- `installed`: npm i axios
-- `usage`: import axios from 'axios';
-- `link`: https://www.npmjs.com/package/axios
 
 ```
 

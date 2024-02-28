@@ -19,14 +19,15 @@ const Nav = () => {
 
   return (
     <nav
-      className={`fixed w-screen bg-transparent-600 p-6 md:px-20 px-4 z-20 shadow-lg bg-[#f6f6f66c]`}
+      className={`fixed w-screen bg-transparent-600 p-4 xl:px-32 md:px-20 px-4 z-20 shadow-lg bg-[#f6f6f66c]`}
     >
-      <div className="max-w-screen-2xl  mx-auto flex items-center justify-between">
+      <div className="mx-auto flex items-center justify-between">
         <div className="w-40">
           <a href="/">
             <img
-              alt="octacore logo"
-              src={require("../../assets/images/logo2.png")}
+              className="h-20"
+              alt="chariot logo"
+              src={require("../../assets/images/logoBig.png")}
             />
           </a>
         </div>

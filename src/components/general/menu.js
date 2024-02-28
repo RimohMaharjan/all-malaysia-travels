@@ -19,8 +19,8 @@ function Menu() {
         <div className="w-48 p-6">
           <a href="/">
             <img
-              alt="octacore logo"
-              src={require("../../assets/images/logo2.png")}
+              alt="chariot logo"
+              src={require("../../assets/images/logoBig.png")}
             />
           </a>
         </div>

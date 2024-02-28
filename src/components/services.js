@@ -35,14 +35,14 @@ const Services = () => {
       },
     ],
   };
-  console.log(services);
+
   return (
     <div>
       <div
-        className="bg-fixed bg-center bg-cover h-64 z-[-2]"
+        className="grid place-content-center bg-fixed bg-center bg-cover h-64 z-[-2]"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <h1 className="text-center pt-44 text-5xl text-white">Our services</h1>
+        <h1 className="pt-20 text-5xl text-white">Our services</h1>
       </div>
 
       {services ? (
@@ -76,9 +76,9 @@ const Services = () => {
           ))}
         </div>
       ) : services_error ? (
-        <p className="text-center">{services_error}</p>
+        <p className="text-center min-h-[64.4vh]">{services_error}</p>
       ) : (
-        <p className="text-center">loading</p>
+        <p className="text-center min-h-[64.4vh]">loading</p>
       )}
       <Footer />
     </div>

@@ -53,7 +53,7 @@ const ContactForm = () => {
       <div className="md:grid md:grid-cols-2 gap-x-12 pt-8">
         <div className="mb-5">
           <label htmlFor="" className="block mb-2 text-sm">
-            Full Name
+            Full Name *
           </label>
           <input
             type="text"
@@ -72,7 +72,7 @@ const ContactForm = () => {
         </div>
         <div className="mb-5">
           <label htmlFor="" className="block mb-2 text-sm">
-            Country
+            Country *
           </label>
           <select
             value={formData.country}
@@ -97,7 +97,7 @@ const ContactForm = () => {
         </div>
         <div className="mb-5">
           <label htmlFor="email" className="block mb-2 text-sm">
-            Email
+            Email *
           </label>
           <input
             type="email"
@@ -116,7 +116,7 @@ const ContactForm = () => {
         </div>
         <div className="mb-5">
           <label htmlFor="" className="block mb-2 text-sm">
-            Contact
+            Contact *
           </label>
           <input
             type="number"
@@ -135,11 +135,11 @@ const ContactForm = () => {
         </div>
         <div className="mb-5">
           <label htmlFor="message" className="block mb-2 text-sm ">
-            Message
+            Message *
           </label>
           <textarea
             id="message"
-            rows="2"
+            rows="3"
             value={formData.message}
             onChange={(e) =>
               setFormData({
@@ -148,8 +148,9 @@ const ContactForm = () => {
               })
             }
             className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300"
-            placeholder=""
-          ></textarea>
+            placeholder="Write your message here"
+            required
+          />
           <p className="text-xs">Max 500 characters</p>
         </div>
       </div>

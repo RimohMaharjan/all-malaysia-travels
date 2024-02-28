@@ -79,15 +79,17 @@ const Products = () => {
       </div>
 
       {/* location */}
-      <iframe
-        title="location"
-        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.59720814210306!2d103.857979!3d1.3086513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19e1d186e02d%3A0x2242714927df7e83!2sJalan%20Besar%20Plaza!5e0!3m2!1sen!2snp!4v1708320121399!5m2!1sen!2snp"
-        height="300"
-        style={{ width: "85vw", paddingBottom: "30px" }}
-        allowFullScreen=""
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-      ></iframe>
+      <div className="w-[85vw] mx-auto">
+        <iframe
+          title="location"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d498.59720814210306!2d103.857979!3d1.3086513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da19e1d186e02d%3A0x2242714927df7e83!2sJalan%20Besar%20Plaza!5e0!3m2!1sen!2snp!4v1708320121399!5m2!1sen!2snp"
+          height="300"
+          style={{ width: "85vw", paddingBottom: "30px" }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
     </div>
   );
 };

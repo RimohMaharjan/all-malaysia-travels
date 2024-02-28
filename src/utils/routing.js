@@ -10,8 +10,8 @@ import Playground from "../pages/playground/playground";
 
 import ToTop from "./scrollToTop";
 import Services from "../components/services";
-import Nav from "../components/nav";
-import Banner from "../components/banner";
+import Nav from "../components/general/nav";
+import Banner from "../components/home/banner";
 
 const Routing = () => {
   return (

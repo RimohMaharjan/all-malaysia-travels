@@ -2,8 +2,8 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { API_URL } from "../constants";
-import useFetch from "../utils/useFetch";
+import { API_URL } from "../../constants";
+import useFetch from "../../utils/useFetch";
 
 function NextArrow(props) {
   const { className, style, onClick } = props;
@@ -48,8 +48,12 @@ const Banner = () => {
         <Slider {...settings}>
           {banner.map((item) => (
             <>
-              <div >
-                <img className="md:h-screen object-fill" src={item.image} alt="banner" />
+              <div>
+                <img
+                  className="md:h-screen w-screen object-cover"
+                  src={item.image}
+                  alt="banner"
+                />
               </div>
             </>
           ))}

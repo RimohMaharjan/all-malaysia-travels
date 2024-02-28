@@ -1,5 +1,5 @@
 import React from "react";
-import bgImg from "../assets/images/home.png";
+import bgImg from "../../assets/images/home.png";
 import { Link } from "react-router-dom";
 
 const HomePage = () => {

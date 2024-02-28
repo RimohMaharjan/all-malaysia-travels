@@ -1,6 +1,6 @@
 import React from "react";
-import { API_URL } from "../constants";
-import useFetch from "../utils/useFetch";
+import { API_URL } from "../../constants";
+import useFetch from "../../utils/useFetch";
 
 const Representation = () => {
   const { data: partners, error: partners_error } = useFetch(

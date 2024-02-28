@@ -1,12 +1,12 @@
 import React from "react";
-import HomePage from "../components/homePage";
-import About from "../components/about";
-import Vision from "../components/vision";
-import Products from "../components/products";
-import Footer from "../components/footer";
+import HomePage from "../components/home/homePage";
+import About from "../components/home/about";
+import Vision from "../components/home/vision";
+import Products from "../components/home/products";
+import Footer from "../components/general/footer";
 import { useRef } from "react";
-import Representation from "../components/representation";
-import Banner from "../components/banner";
+import Representation from "../components/home/representation";
+import Banner from "../components/home/banner";
 
 const Home = () => {
   const scrollRef = useRef(null);

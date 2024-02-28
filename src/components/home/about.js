@@ -1,6 +1,6 @@
 import React from "react";
-import { API_URL } from "../constants";
-import useFetch from "../utils/useFetch";
+import { API_URL } from "../../constants";
+import useFetch from "../../utils/useFetch";
 
 const About = () => {
   // fetching data
@@ -25,7 +25,7 @@ const About = () => {
       </div>
 
       <div>
-        <img src={require("../assets/images/about.png")} alt="about" />
+        <img src={require("../../assets/images/about.png")} alt="about" />
       </div>
     </div>
   );

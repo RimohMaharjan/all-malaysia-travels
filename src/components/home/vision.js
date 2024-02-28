@@ -1,7 +1,7 @@
 import React from "react";
-import bgImg from "../assets/images/vision.png";
-import { API_URL } from "../constants";
-import useFetch from "../utils/useFetch";
+import bgImg from "../../assets/images/vision.png";
+import { API_URL } from "../../constants";
+import useFetch from "../../utils/useFetch";
 
 const Vision = () => {
   const { data: vision, error: vision_error } = useFetch(`${API_URL}missions/`);

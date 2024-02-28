@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MenuProvider from "react-flexible-sliding-menu";
-import Menu from './components/menu';
+import Menu from './components/general/menu';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

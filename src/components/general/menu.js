@@ -4,8 +4,8 @@ import { RxCross1 } from "react-icons/rx";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
-import { API_URL } from "../constants";
-import useFetch from "../utils/useFetch";
+import { API_URL } from "../../constants";
+import useFetch from "../../utils/useFetch";
 
 function Menu() {
   const { data: footer, error: footer_error } = useFetch(
@@ -20,7 +20,7 @@ function Menu() {
           <a href="/">
             <img
               alt="octacore logo"
-              src={require("../assets/images/logo2.png")}
+              src={require("../../assets/images/logo2.png")}
             />
           </a>
         </div>

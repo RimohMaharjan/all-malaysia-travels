@@ -26,7 +26,7 @@ const Nav = () => {
           <a href="/">
             <img
               alt="octacore logo"
-              src={require("../assets/images/logo2.png")}
+              src={require("../../assets/images/logo2.png")}
             />
           </a>
         </div>

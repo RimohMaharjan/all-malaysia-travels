@@ -7,21 +7,6 @@ import { API_URL } from "../constants";
 import useFetch from "../utils/useFetch";
 
 const Services = () => {
-  let texts = [
-    {
-      heading: "Travel",
-      text: "At Chariot Travels, we are dedicated to providing an array of premium travel services that cater to the unique desires and preferences of our clients. From tailor-made vacation packages and seamless booking experiences to personalized itinerary planning and attentive customer support, our commitment to excellence ensures that every journey is nothing short of extraordinary. An adventurous expedition and our comprehensive range of travel services is designed to turn your travel aspirations into reality, creating unforgettable memories along the way.",
-    },
-    {
-      heading: "Hotel",
-      text: "At our hotel, we pride ourselves on delivering exceptional services that cater to the diverse needs of our guests. From luxurious accommodations and world-class dining to attentive concierge assistance and state-of-the-art amenities, our commitment to excellence ensures that every aspect of your stay is nothing short of extraordinary. Whether you're seeking relaxation, adventure, or seamless business travel, our range of services is designed to elevate your experience and create lasting memories.",
-    },
-    {
-      heading: "Remittance",
-      text: "At our remittance, we are dedicated to providing reliable and efficient remittance services that cater to the diverse needs of our clients. Our commitment to excellence ensures secure and timely money transfers, competitive exchange rates, and personalized assistance to meet the financial needs of our customers. Sending money to support your loved ones, conducting business transactions, or managing international payments, our comprehensive range of remittance services is designed to provide peace of mind and convenience, allowing you to stay connected with your global financial commitments.",
-    },
-  ];
-
   const { data: services, error: services_error } = useFetch(
     `${API_URL}services/`
   );

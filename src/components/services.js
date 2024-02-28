@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { API_URL } from "../constants";
 import useFetch from "../utils/useFetch";
+import Footer from "../components/general/footer";
 
 const Services = () => {
   const { data: services, error: services_error } = useFetch(
@@ -18,17 +19,23 @@ const Services = () => {
     centerPadding: "60px",
     slidesToShow: 5,
     speed: 500,
+    slidesToScroll: 1,
     responsive: [
+      {
+        breakpoint: 1180,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
       {
         breakpoint: 600,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
         },
       },
     ],
   };
-
+  console.log(services);
   return (
     <div>
       <div
@@ -40,31 +47,32 @@ const Services = () => {
 
       {services ? (
         <div
-          className="w-[85vw] mx-auto pt-20 space-y-8 text-red-900 border-b pb-10"
+          className="w-[85vw] mx-auto pt-20 text-red-900 border-b pb-20"
           style={{ borderBlockColor: "#D9D9D9" }}
         >
           {services.map((item, index) => (
-            <>
-              <h1 className="text-4xl font-bold">{item.title}</h1>
-              <p className="font-light">{item.description}</p>
-
+            <div className="py-10 border-b-2 m-0" key={index}>
+              <h1 className="text-4xl font-bold mb-5">{item.title}</h1>
+              <p className="font-light mb-5">{item.description}</p>
               <Slider {...settings}>
-                <div
-                  key={index}
-                  className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
-                >
-                  {item.service_images.map((service, index) => (
-                    <a href={service.url} target="_blank" rel="noreferrer">
+                {item.service_images.map((product, index) => (
+                  <div className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90 pt-10">
+                    <a
+                      key={index}
+                      href={product.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <img
-                        className="md:max-h-16 max-h-12 inline object-contain mx-auto "
-                        src={service.image}
+                        className="2xl:h-16 h-20 inline object-contain mx-auto px-5"
+                        src={product.image}
                         alt="services"
                       />
                     </a>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </Slider>
-            </>
+            </div>
           ))}
         </div>
       ) : services_error ? (
@@ -72,6 +80,7 @@ const Services = () => {
       ) : (
         <p className="text-center">loading</p>
       )}
+      <Footer />
     </div>
   );
 };

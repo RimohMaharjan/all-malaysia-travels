@@ -14,49 +14,66 @@ import Nav from "../components/general/nav";
 import Banner from "../components/home/banner";
 
 const Routing = () => {
-  const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const visionRef = useRef(null);
-  const repRef = useRef(null);
-  const promotionRef = useRef(null);
-  const prodsRef = useRef(null);
+	const homeRef = useRef(null);
+	const aboutRef = useRef(null);
+	const visionRef = useRef(null);
+	const repRef = useRef(null);
+	const promotionRef = useRef(null);
+	const prodsRef = useRef(null);
 
-  return (
-    <Router>
-      <Nav
-        homeRef={homeRef}
-        aboutRef={aboutRef}
-        visionRef={visionRef}
-        repRef={repRef}
-        promotionRef={promotionRef}
-        prodsRef={prodsRef}
-      />
-      <ToTop />
+	const MainLayout = ({ children }) => {
+		return (
+			<>
+				<Nav
+					homeRef={homeRef}
+					aboutRef={aboutRef}
+					visionRef={visionRef}
+					repRef={repRef}
+					promotionRef={promotionRef}
+					prodsRef={prodsRef}
+				/>
+				<ToTop />
+				{children}
+			</>
+		);
+	};
 
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={
-            <Home
-              homeRef={homeRef}
-              aboutRef={aboutRef}
-              visionRef={visionRef}
-              repRef={repRef}
-              promotionRef={promotionRef}
-              prodsRef={prodsRef}
-            />
-          }
-        />
-        <Route exact path="/services" element={<Services />} />
-        <Route exact path="/banner" element={<Banner />} />
-        <Route exact path="/playground" element={<Playground />} />
+	return (
+		<Router>
+			<Routes>
+				<Route
+					exact
+					path="/"
+					element={
+						<MainLayout>
+							<Home
+								homeRef={homeRef}
+								aboutRef={aboutRef}
+								visionRef={visionRef}
+								repRef={repRef}
+								promotionRef={promotionRef}
+								prodsRef={prodsRef}
+							/>
+						</MainLayout>
+					}
+				/>
+				<Route
+					exact
+					path="/services"
+					element={
+						<MainLayout>
+							<Services />
+						</MainLayout>
+					}
+				/>
+				<Route exact path="/banner" element={<Banner />} />
+				<Route exact path="/playground" element={<Playground />} />
 
-        {/* default routes for invalid links */}
-        {/* <Route path="*" element={<NotFound />} /> */}
-      </Routes>
-    </Router>
-  );
+				{/* default routes for invalid links */}
+				{/* <Route path="*" element={<NotFound />} /> */}
+			</Routes>
+		</Router>
+	);
 };
 
 export default Routing;

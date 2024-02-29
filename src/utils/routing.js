@@ -4,14 +4,13 @@ import React, { useRef } from "react";
 import Home from "../pages/home";
 
 // for testing
-import Playground from "../pages/playground/playground";
+// import Playground from "../pages/playground/playground";
 
-// import NotFound from "../pages/notFound";
+import NotFound from "../pages/notFound";
 
 import ToTop from "./scrollToTop";
 import Services from "../components/services";
 import Nav from "../components/general/nav";
-import Banner from "../components/home/banner";
 
 const Routing = () => {
 	const homeRef = useRef(null);
@@ -66,11 +65,9 @@ const Routing = () => {
 						</MainLayout>
 					}
 				/>
-				<Route exact path="/banner" element={<Banner />} />
-				<Route exact path="/playground" element={<Playground />} />
 
 				{/* default routes for invalid links */}
-				{/* <Route path="*" element={<NotFound />} /> */}
+				<Route path="*" element={<NotFound />} />
 			</Routes>
 		</Router>
 	);

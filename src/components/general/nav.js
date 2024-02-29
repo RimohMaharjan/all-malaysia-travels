@@ -74,7 +74,7 @@ const Nav = ({
         <div className="w-40">
           <a href="/">
             <img
-              className="h-20"
+              className="md:h-20 h-16"
               alt="chariot logo"
               src={require("../../assets/images/logoBig.png")}
             />

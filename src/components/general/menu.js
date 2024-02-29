@@ -105,7 +105,7 @@ function Menu() {
           <a href="/">
             <img
             onClick={scrollToTop}
-            className="h-20"
+            className="h-16"
               alt="chariot logo"
               src={require("../../assets/images/logoBig.png")}
             />
@@ -116,7 +116,7 @@ function Menu() {
         </button>
       </div>
 
-      <div className="flex flex-col space-y-4 w-[80vw] mx-auto text-4xl pt-6">
+      <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-4xl pt-6">
       {pathname === "/" ? (
           <>
             {navItems.map((item, index) => (
@@ -146,7 +146,7 @@ function Menu() {
       </div>
 
       {footer ? (
-        <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-md pt-10">
+        <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-md pt-20">
           {footer && (
             <>
               <a className={` text-md`} href={`tel: ${footer[2].description}`}>

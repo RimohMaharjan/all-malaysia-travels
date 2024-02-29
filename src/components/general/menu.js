@@ -13,12 +13,93 @@ function Menu() {
   );
 
   const { closeMenu } = useContext(MenuContext);
+
+  const scrollToTop = () => {
+    closeMenu();
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  const scrollToAbout = () => {
+    closeMenu();
+    window.scrollTo({
+      top: 730,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToMission = () => {
+    closeMenu();
+    window.scrollTo({
+      top: 1320,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToRep = () => {
+    closeMenu();
+    window.scrollTo({
+      top: 2170,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToBanner = () => {
+    closeMenu();
+    window.scrollTo({
+      top: 2855,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const scrollToProducts = () => {
+    closeMenu();
+    window.scrollTo({
+      top: 3075,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const navItems = [
+    {
+      label: "Home",
+      path: "/",
+      scroll: scrollToTop,
+    },
+    {
+      label: "About us",
+      scroll: scrollToAbout,
+    },
+    {
+      label: "Vision",
+      scroll: scrollToMission,
+    },
+    {
+      label: "Representation",
+      scroll: scrollToRep,
+    },
+    {
+      label: "Promotions",
+      scroll: scrollToBanner,
+    },
+    {
+      label: "Contact",
+      scroll: scrollToProducts,
+    },
+  ];
+
   return (
     <div>
       <div className="mx-auto flex items-center justify-between  gap-28">
         <div className="w-48 p-6">
           <a href="/">
             <img
+            onClick={scrollToTop}
+            className="h-20"
               alt="chariot logo"
               src={require("../../assets/images/logoBig.png")}
             />
@@ -29,17 +110,21 @@ function Menu() {
         </button>
       </div>
 
-      <div className="flex flex-col space-y-8 w-[80vw] mx-auto text-4xl pt-8">
-        <a href="/">Home</a>
-        {/* <a href="!#">About Us</a>
-        <a href="!#">Vision</a>
-        <a href="!#">Representation</a>
-        <a href="!#">Contact</a> */}
+      <div className="flex flex-col space-y-4 w-[80vw] mx-auto text-4xl pt-6">
+      {navItems.map((item, index) => (
+          <p
+            key={index}
+            onClick={item.scroll}
+            className="cursor-pointer text-[30px] pb-5 "
+          >
+            {item.label}
+          </p>
+        ))}
         <a href="/services">Services</a>
       </div>
 
       {footer ? (
-        <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-md pt-40">
+        <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-md pt-10">
           {footer && (
             <>
               <a className={` text-md`} href={`tel: ${footer[2].description}`}>

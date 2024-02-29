@@ -10,7 +10,7 @@ const Representation = ({ repRef }) => {
   return (
     <div
       ref={repRef}
-      className="snap-always snap-start max-w-screen-2xl mx-auto lg:grid grid-cols-3 md:min-h-screen 2xl:px-5 md:px-20 px-5 lg:pt-0 pt-32"
+      className="snap-always snap-start max-w-screen-2xl mx-auto lg:grid grid-cols-3 md:min-h-screen 2xl:px-5 md:px-20 px-5 lg:pt-0 pt-20"
     >
       <div className="table">
         <div className="md:table-cell align-middle text-red-900">
@@ -21,7 +21,7 @@ const Representation = ({ repRef }) => {
         </div>
       </div>
 
-      <div className="lg:col-span-2 md:py-0 py-12 mx-auto grid md:place-content-center mt-10">
+      <div className="lg:col-span-2 md:py-0 py-12 mx-auto grid md:place-content-center">
         {partners ? (
           <div className="grid md:grid-cols-3 grid-cols-2 xl:gap-x-32 lg:gap-x-5 md:gap-x-32 gap-5 items-center justify-items-center ">
             {partners.map((item) => (

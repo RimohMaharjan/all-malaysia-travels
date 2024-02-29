@@ -42,7 +42,7 @@ const Services = () => {
         className="grid place-content-center bg-fixed bg-center  h-64 z-[-2]"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <h1 className="pt-20 text-5xl text-white"><b>Our</b> services</h1>
+        <h1 className="pt-20 text-5xl text-white"><b>Our</b>  services</h1>
       </div>
 
       {services ? (

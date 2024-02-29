@@ -13,6 +13,7 @@ function Menu() {
   );
 
   const { closeMenu } = useContext(MenuContext);
+  const pathname = window.location.pathname;
 
   const scrollToTop = () => {
     closeMenu();
@@ -72,22 +73,27 @@ function Menu() {
     },
     {
       label: "About us",
+      path: "/",
       scroll: scrollToAbout,
     },
     {
       label: "Vision",
+      path: "/",
       scroll: scrollToMission,
     },
     {
       label: "Representation",
+      path: "/",
       scroll: scrollToRep,
     },
     {
       label: "Promotions",
+      path: "/",
       scroll: scrollToBanner,
     },
     {
       label: "Contact",
+      path: "/",
       scroll: scrollToProducts,
     },
   ];
@@ -111,16 +117,32 @@ function Menu() {
       </div>
 
       <div className="flex flex-col space-y-4 w-[80vw] mx-auto text-4xl pt-6">
-      {navItems.map((item, index) => (
-          <p
-            key={index}
-            onClick={item.scroll}
-            className="cursor-pointer text-[30px] pb-5 "
-          >
-            {item.label}
-          </p>
-        ))}
-        <a href="/services">Services</a>
+      {pathname === "/" ? (
+          <>
+            {navItems.map((item, index) => (
+              <p
+                key={index}
+                onClick={item.scroll}
+                className="cursor-pointer text-[30px] pb-5 "
+              >
+                {item.label}
+              </p>
+            ))}
+          </>
+        ) : (
+          <>
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={item.path}
+                className="cursor-pointer text-[30px] pb-5 block"
+              >
+                {item.label}
+              </a>
+            ))}
+          </>
+        )}
+        <a href="/services" className="cursor-pointer text-[30px]">Services</a>
       </div>
 
       {footer ? (

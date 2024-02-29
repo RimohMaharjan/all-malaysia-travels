@@ -39,15 +39,15 @@ const Services = () => {
   return (
     <div>
       <div
-        className="grid place-content-center bg-fixed bg-center bg-cover h-64 z-[-2]"
+        className="grid place-content-center bg-fixed bg-center  h-64 z-[-2]"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <h1 className="pt-20 text-5xl text-white">Our services</h1>
+        <h1 className="pt-20 text-5xl text-white"><b>Our</b> services</h1>
       </div>
 
       {services ? (
         <div
-          className="w-[85vw] mx-auto pt-20 text-red-900 border-b pb-20"
+          className="w-[85vw] mx-auto pt-6 text-red-900 border-b pb-20"
           style={{ borderBlockColor: "#D9D9D9" }}
         >
           {services.map((item, index) => (

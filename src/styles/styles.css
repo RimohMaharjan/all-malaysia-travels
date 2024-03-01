@@ -37,3 +37,15 @@ input:-webkit-autofill:focus {
 :focus-visible {
   outline: 0 !important;
 }
+
+.products-banner .slick-prev:before,
+.products-banner .slick-next:before {
+  font-size: 30px;
+  color: black;
+}
+
+.services-banner .slick-prev:before,
+.services-banner .slick-next:before {
+  font-size: 30px;
+  color: black;
+}

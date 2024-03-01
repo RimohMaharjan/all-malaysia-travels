@@ -48,7 +48,7 @@ const Products = ({ prodsRef }) => {
         <b>Our</b> products
       </h1>
       {/* products */}
-      <div className="overflow-x-hidden">
+      <div className="products-banner overflow-x-hidden">
         {products ? (
           <Slider {...settings}>
             {products.map((item, index) => (

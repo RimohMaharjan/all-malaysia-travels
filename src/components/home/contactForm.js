@@ -137,27 +137,44 @@ const ContactForm = () => {
             required
           />
         </div>
+
         <div className="mb-5">
-          <label htmlFor="message" className="block mb-2 text-sm ">
-            Message *
+          <label
+            class="block mb-2 text-sm "
+            for="large_size"
+          >
+            Upload File
           </label>
-          <textarea
-            id="message"
-            rows="3"
-            value={formData.message}
-            onChange={(e) =>
-              setFormData({
-                ...formData,
-                message: e.target.value,
-              })
-            }
-            className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300"
-            placeholder="Write your message here"
-            required
-          />
-          <p className="text-xs">Max 500 characters</p>
+          <input
+            class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer p-1.5 bg-white"
+            id="file"
+            type="file"
+            
+          ></input>
         </div>
       </div>
+
+      <div className="mb-5">
+        <label htmlFor="message" className="block mb-2 text-sm ">
+          Message *
+        </label>
+        <textarea
+          id="message"
+          rows="3"
+          value={formData.message}
+          onChange={(e) =>
+            setFormData({
+              ...formData,
+              message: e.target.value,
+            })
+          }
+          className="block p-2.5 w-[85vw] text-sm   rounded-lg border border-gray-300"
+          placeholder="Write your message here"
+          required
+        />
+        <p className="text-xs">Max 500 characters</p>
+      </div>
+
       <button
         type="submit"
         className="bg-transparent rounded-md py-2 px-6 border border-black mb-12  hover:bg-red-900 hover:text-white"

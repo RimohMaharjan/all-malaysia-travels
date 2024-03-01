@@ -51,7 +51,7 @@ const Services = () => {
           style={{ borderBlockColor: "#D9D9D9" }}
         >
           {services.map((item, index) => (
-            <div className="py-10 border-b-2 m-0" key={index}>
+            <div className="services-banner py-10 border-b-2 m-0" key={index}>
               <h1 className="text-4xl font-bold mb-5">{item.title}</h1>
               <p className="font-light mb-5">{item.description}</p>
               <Slider {...settings}>

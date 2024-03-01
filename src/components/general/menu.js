@@ -100,7 +100,7 @@ function Menu() {
 
   return (
     <div>
-      <div className="mx-auto flex items-center justify-between  gap-28">
+      <div className="mx-auto flex items-center justify-between">
         <div className="w-48 p-6">
           <a href="/">
             <img

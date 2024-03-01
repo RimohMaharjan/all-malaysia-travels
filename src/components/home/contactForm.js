@@ -52,6 +52,37 @@ const ContactForm = () => {
       });
     reset();
   };
+
+  const [selectedFile, setSelectedFile] = useState();
+  const [errorMsg, setErrorMsg] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleFileChange = (event) => {
+    if(event.target.files.length > 0){
+      setSelectedFile(event.target.files[0]);
+    }
+  };
+
+  const validateSelectedFile = () => {
+    const MAX_FILE_SIZE = 5120 // 5MB
+
+    if (!selectedFile) {
+      setErrorMsg("Please choose a file");
+      setIsSuccess(false)
+      return
+    }
+
+    const fileSizeKiloBytes = selectedFile.size / 1024
+
+    if(fileSizeKiloBytes > MAX_FILE_SIZE){
+      setErrorMsg("File size is greater than maximum limit");
+      setIsSuccess(false)
+      return
+    }
+
+    setErrorMsg("")
+    setIsSuccess(true)
+  };
   return (
     <form onSubmit={handleContactSubmit}>
       <div className="md:grid md:grid-cols-2 gap-x-12 pt-8">
@@ -149,9 +180,13 @@ const ContactForm = () => {
             class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer p-1.5 bg-white"
             id="file"
             type="file"
-            
+            onChange={handleFileChange}
           ></input>
+          {isSuccess ? <p className="text-xs">File size valid</p> : null}
+          <p className="text-xs">{errorMsg}</p>
         </div>
+
+          
       </div>
 
       <div className="mb-5">
@@ -178,6 +213,7 @@ const ContactForm = () => {
       <button
         type="submit"
         className="bg-transparent rounded-md py-2 px-6 border border-black mb-12  hover:bg-red-900 hover:text-white"
+        onClick={validateSelectedFile}
       >
         Submit
       </button>

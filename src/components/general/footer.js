@@ -8,6 +8,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const { data: footer, error: footer_error } = useFetch(
@@ -32,7 +33,7 @@ const Footer = () => {
 
         <div className="flex items-center  text-white space-x-8 md:text-2xl text-xl ">
           <Link
-          className="rounded-full border-2 p-2 hover:bg-white hover:text-black"
+          className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-300 ease-in-out"
             to="https://www.youtube.com/@TravelsChariot"
             target="_blank"
             rel="noreferrer"
@@ -41,7 +42,7 @@ const Footer = () => {
           </Link>
 
           <Link
-          className="rounded-full border-2 p-2 hover:bg-white hover:text-black"
+          className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-300 ease-in-out"
             to="https://www.facebook.com/ChariotSG"
             target="_blank"
             rel="noreferrer"
@@ -50,16 +51,16 @@ const Footer = () => {
           </Link>
 
           <Link
-          className="rounded-full border-2 p-2 hover:bg-white hover:text-black"
+          className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-300 ease-in-out"
             to="https://twitter.com/ChariotSG"
             target="_blank"
             rel="noreferrer"
           >
-            <FaTwitter />
+            <FaXTwitter />
           </Link>
 
           <Link
-          className="rounded-full border-2 p-2 hover:bg-white hover:text-black"
+          className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-300 ease-in-out"
             to="https://www.instagram.com/chariottravels/"
             target="_blank"
             rel="noreferrer"
@@ -81,6 +82,17 @@ const Footer = () => {
                     {footer[2].description}
                   </a>
                 </div>
+                
+                <div>
+                  <a
+                    className={`md:text-md text-sm`}
+                    href={`mailto: ${footer[3].description}`}
+                  >
+                    <IoIosMail className="inline mr-2" />
+                    {footer[3].description}
+                  </a>
+                </div>
+
                 <div>
                   <a
                     className={`md:text-md text-sm`}
@@ -90,15 +102,6 @@ const Footer = () => {
                   >
                     <IoLocationSharp className="inline mr-2" />
                     {footer[4].description}
-                  </a>
-                </div>
-                <div>
-                  <a
-                    className={`md:text-md text-sm`}
-                    href={`mailto: ${footer[3].description}`}
-                  >
-                    <IoIosMail className="inline mr-2" />
-                    {footer[3].description}
                   </a>
                 </div>
               </>

@@ -14,6 +14,9 @@ const Representation = ({ repRef }) => {
     >
       <div className="table">
         <div className="md:table-cell align-middle text-red-900">
+        <h1 className="2xl:text-6xl xl:text-5xl text-4xl font-bold">
+            Airline
+          </h1>
           <h1 className="2xl:text-6xl xl:text-5xl text-4xl font-bold">
             Representation
           </h1>

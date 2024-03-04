@@ -109,7 +109,7 @@ const Footer = () => {
       </div>
 
       <div className="md:text-md text-sm text-center text-white pt-5 ">
-        <h1>© {year} | Chariot Travels | Developed by Octacore Solutions</h1>
+        <h1>© {year} | Chariot Ventures Group | Developed by Octacore Solutions</h1>
       </div>
     </div>
   );

@@ -68,15 +68,15 @@ const Nav = ({
 
   return (
     <nav
-      className={`fixed w-screen bg-transparent-600 p-4 xl:px-32 md:px-20 px-4 z-20 shadow-lg bg-[#f6f6f66c]`}
+      className={`fixed w-screen bg-transparent-600 p-4 xl:px-32 lg:px-6 px-4 z-20 shadow-lg bg-[#f6f6f66c]`}
     >
-      <div className="mx-auto flex items-center justify-between">
-        <div className="w-40">
+      <div className="mx-auto flex items-center justify-between mr-6">
+        <div className="">
           <a href="/">
             <img
-              className="md:h-20 h-16"
+              className="md:h-14 h-10"
               alt="chariot logo"
-              src={require("../../assets/images/logoBig.png")}
+              src={require("../../assets/images/logoNew.png")}
             />
           </a>
         </div>

@@ -58,3 +58,14 @@ p {
   margin: 0 100px;
   padding: 0 !important;
 }
+
+input[type="file"]::file-selector-button {
+  /* visibility: hidden; */
+  display: none;
+}
+
+input[type="file"] {
+  text-align-last: center;
+  padding-top: 107px;
+  padding-bottom: 107px;
+}

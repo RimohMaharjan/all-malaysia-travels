@@ -104,10 +104,10 @@ function Menu() {
         <div className="w-48 p-6">
           <a href="/">
             <img
-            onClick={scrollToTop}
-            className="h-16"
+              onClick={scrollToTop}
+              className="h-16"
               alt="chariot logo"
-              src={require("../../assets/images/logoBig.png")}
+              src={require("../../assets/images/logoNew.png")}
             />
           </a>
         </div>
@@ -117,7 +117,7 @@ function Menu() {
       </div>
 
       <div className="flex flex-col space-y-2 w-[80vw] mx-auto text-4xl pt-6">
-      {pathname === "/" ? (
+        {pathname === "/" ? (
           <>
             {navItems.map((item, index) => (
               <p
@@ -142,7 +142,9 @@ function Menu() {
             ))}
           </>
         )}
-        <a href="/services" className="cursor-pointer text-[30px]">Services</a>
+        <a href="/services" className="cursor-pointer text-[30px]">
+          Services
+        </a>
       </div>
 
       {footer ? (

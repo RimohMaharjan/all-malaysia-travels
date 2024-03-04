@@ -1,7 +1,6 @@
 import React from "react";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { API_URL } from "../../constants";
 import useFetch from "../../utils/useFetch";

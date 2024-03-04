@@ -12,8 +12,6 @@ const Products = ({ prodsRef }) => {
   );
 
   const settings = {
-    className: "center",
-    centerMode: true,
     infinite: true,
     centerPadding: "60px",
     slidesToShow: 5,
@@ -48,7 +46,7 @@ const Products = ({ prodsRef }) => {
         <b>Our</b> products
       </h1>
       {/* products */}
-      <div className="products-banner overflow-x-hidden">
+      <div className="products-banner">
         {products ? (
           <Slider {...settings}>
             {products.map((item, index) => (

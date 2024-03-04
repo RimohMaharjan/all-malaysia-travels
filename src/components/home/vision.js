@@ -31,12 +31,12 @@ const Vision = ({ visionRef }) => {
                         {item.number_text}
                       </h1>
                       <div className="w-full">
-                        <p className="md:text-4xl text-xl border-b p-2">
+                        <h1 className="md:text-4xl text-xl border-b p-2">
                           {item.title}
-                        </p>
-                        <h1 className="md:text-lg text-md p-2">
-                          {item.description}
                         </h1>
+                        <p className="md:text-lg text-md p-2">
+                          {item.description}
+                        </p>
                       </div>
                     </div>
                   </div>

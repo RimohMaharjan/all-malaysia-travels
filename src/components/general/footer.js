@@ -9,7 +9,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
-
+import { FaXTwitter } from "react-icons/fa6";
 const Footer = () => {
   const { data: footer, error: footer_error } = useFetch(
     `${API_URL}home-page-data/`
@@ -53,7 +53,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-            <FaTwitter />
+            <FaXTwitter />
           </Link>
 
           <Link

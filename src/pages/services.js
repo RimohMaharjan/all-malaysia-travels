@@ -17,7 +17,7 @@ const Services = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 5,
+    slidesToShow: 4,
     speed: 500,
     slidesToScroll: 1,
     responsive: [
@@ -42,7 +42,9 @@ const Services = () => {
         className="grid place-content-center bg-fixed bg-center  h-64 z-[-2]"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
-        <h1 className="pt-20 text-5xl text-white"><b>Our</b>  services</h1>
+        <h1 className="pt-20 text-5xl text-white">
+          <b>Our</b> services
+        </h1>
       </div>
 
       {services ? (
@@ -54,24 +56,41 @@ const Services = () => {
             <div className="services-banner py-10 border-b-2 m-0" key={index}>
               <h1 className="text-4xl font-bold mb-5">{item.title}</h1>
               <p className="font-light mb-5">{item.description}</p>
-              <Slider {...settings}>
-                {item.service_images.map((product, index) => (
-                  <div className="grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90 pt-10">
-                    <a
+              {item.service_images.length > 4 ? (
+                <Slider {...settings}>
+                  {item.service_images.map((product, index) => (
+                    <div
                       key={index}
-                      href={product.url}
-                      target="_blank"
-                      rel="noreferrer"
+                      className="inline grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90 pt-10"
                     >
-                      <img
-                        className="2xl:h-16 h-20 inline object-contain mx-auto px-5"
-                        src={product.image}
-                        alt="services"
-                      />
-                    </a>
-                  </div>
-                ))}
-              </Slider>
+                      <a href={product.url} target="_blank" rel="noreferrer">
+                        <img
+                          className="2xl:h-16 h-14 inline object-contain mx-auto px-5"
+                          src={product.image}
+                          alt="services"
+                        />
+                      </a>
+                    </div>
+                  ))}
+                </Slider>
+              ) : (
+                <div className="pt-10 flex justify-between">
+                  {item.service_images.map((product, index) => (
+                    <div
+                      key={index}
+                      className="inline grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
+                    >
+                      <a href={product.url} target="_blank" rel="noreferrer">
+                        <img
+                          className="2xl:h-16 h-14 inline object-contain mx-auto px-5"
+                          src={product.image}
+                          alt="services"
+                        />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -20,7 +20,7 @@ const HomePage = ({ homeRef }) => {
             Welcome to Chariot
           </h1>
           {data && (
-            <p className="md:text-4xl text-lg text-white font-light  pb-4">
+            <p className="md:text-4xl text-lg text-white font-light text-center pb-4">
               {data[1].description}
             </p>
           )}

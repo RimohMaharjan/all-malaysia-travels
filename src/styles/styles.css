@@ -49,3 +49,12 @@ input:-webkit-autofill:focus {
   font-size: 30px;
   color: black;
 }
+
+p {
+  text-align: justify;
+}
+
+.products-banner .slick-slider .slick-list {
+  margin: 0 100px;
+  padding: 0 !important;
+}

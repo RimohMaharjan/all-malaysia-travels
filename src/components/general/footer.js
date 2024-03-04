@@ -1,7 +1,6 @@
 import React from "react";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { API_URL } from "../../constants";
 import useFetch from "../../utils/useFetch";
@@ -9,7 +8,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   const { data: footer, error: footer_error } = useFetch(
@@ -57,7 +55,7 @@ const Footer = () => {
             target="_blank"
             rel="noreferrer"
           >
-           <FaXTwitter />
+            <FaTwitter />
           </Link>
 
           <Link

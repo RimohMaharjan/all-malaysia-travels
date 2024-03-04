@@ -8,7 +8,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { IoLocationSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { FaXTwitter } from "react-icons/fa6";
+
 const Footer = () => {
   const { data: footer, error: footer_error } = useFetch(
     `${API_URL}home-page-data/`
@@ -18,20 +18,21 @@ const Footer = () => {
   const year = today.getFullYear();
 
   return (
-    <div className={` bg-transparent-600 p-6  z-20 shadow-lg bg-[#393939] `}>
-      <div className="md:flex justify-between border-b-2  md:space-y-0 space-y-6">
+    <div className={` bg-transparent-600 p-10  z-20 shadow-lg bg-[#393939] `}>
+      <div className="md:flex justify-between border-b-2  md:space-y-0 space-y-6 pb-6 ">
         <div className="md:mr-48 mr-0">
           <a href="/">
             <img
-              className="md:w-56 w-44"
+              className="md:w-60 w-44"
               alt="chariot logo"
               src={require("../../assets/images/logoWhite.png")}
             />
           </a>
         </div>
 
-        <div className="flex items-center text-white space-x-8 md:text-3xl text-2xl ">
+        <div className="flex items-center  text-white space-x-8 md:text-2xl text-xl ">
           <Link
+          className="rounded-full border-2 p-2 hover:bg-white hover:text-black"
             to="https://www.youtube.com/@TravelsChariot"
             target="_blank"
             rel="noreferrer"
@@ -40,6 +41,7 @@ const Footer = () => {
           </Link>
 
           <Link
+          className="rounded-full border-2 p-2 hover:bg-white hover:text-black"
             to="https://www.facebook.com/ChariotSG"
             target="_blank"
             rel="noreferrer"
@@ -48,14 +50,16 @@ const Footer = () => {
           </Link>
 
           <Link
+          className="rounded-full border-2 p-2 hover:bg-white hover:text-black"
             to="https://twitter.com/ChariotSG"
             target="_blank"
             rel="noreferrer"
           >
-            <FaXTwitter />
+            <FaTwitter />
           </Link>
 
           <Link
+          className="rounded-full border-2 p-2 hover:bg-white hover:text-black"
             to="https://www.instagram.com/chariottravels/"
             target="_blank"
             rel="noreferrer"
@@ -65,7 +69,7 @@ const Footer = () => {
         </div>
 
         {footer ? (
-          <div className="text-white text-sm mb-2 md:space-y-0 space-y-2 pb-4 ">
+          <div className="text-white text-sm mb-2 md:space-y-2 space-y-2">
             {footer && (
               <>
                 <div>
@@ -107,7 +111,7 @@ const Footer = () => {
         )}
       </div>
 
-      <div className="md:text-md text-sm text-center text-white pt-5 ">
+      <div className="md:text-md text-sm text-center text-white pt-6 ">
         <h1>© {year} | Chariot Ventures Group | Developed by Octacore Solutions</h1>
       </div>
     </div>

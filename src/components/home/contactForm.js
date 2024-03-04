@@ -53,36 +53,36 @@ const ContactForm = () => {
     reset();
   };
 
-  const [selectedFile, setSelectedFile] = useState();
-  const [errorMsg, setErrorMsg] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
+  // const [selectedFile, setSelectedFile] = useState();
+  // const [errorMsg, setErrorMsg] = useState(false);
+  // const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleFileChange = (event) => {
-    if (event.target.files.length > 0) {
-      setSelectedFile(event.target.files[0]);
-    }
-  };
+  // const handleFileChange = (event) => {
+  //   if (event.target.files.length > 0) {
+  //     setSelectedFile(event.target.files[0]);
+  //   }
+  // };
 
-  const validateSelectedFile = () => {
-    const MAX_FILE_SIZE = 5120; // 5MB
+  // const validateSelectedFile = () => {
+  //   const MAX_FILE_SIZE = 5120; // 5MB
 
-    if (!selectedFile) {
-      setErrorMsg("Please choose a file");
-      setIsSuccess(false);
-      return;
-    }
+  //   if (!selectedFile) {
+  //     setErrorMsg("Please choose a file");
+  //     setIsSuccess(false);
+  //     return;
+  //   }
 
-    const fileSizeKiloBytes = selectedFile.size / 1024;
+  //   const fileSizeKiloBytes = selectedFile.size / 1024;
 
-    if (fileSizeKiloBytes > MAX_FILE_SIZE) {
-      setErrorMsg("File size is greater than maximum limit");
-      setIsSuccess(false);
-      return;
-    }
+  //   if (fileSizeKiloBytes > MAX_FILE_SIZE) {
+  //     setErrorMsg("File size is greater than maximum limit");
+  //     setIsSuccess(false);
+  //     return;
+  //   }
 
-    setErrorMsg("");
-    setIsSuccess(true);
-  };
+  //   setErrorMsg("");
+  //   setIsSuccess(true);
+  // };
   return (
     <form onSubmit={handleContactSubmit}>
       <div className="md:grid md:grid-cols-2 gap-x-12 pt-8">
@@ -169,7 +169,7 @@ const ContactForm = () => {
           />
         </div>
 
-        <div className="mb-5">
+        {/* <div className="mb-5">
           <label class="block mb-2 text-sm " for="large_size">
             Upload File
           </label>
@@ -191,11 +191,11 @@ const ContactForm = () => {
               &nbsp;{errorMsg}&nbsp;
             </p>
           )}
-        </div>
+        </div> */}
       </div>
 
       {/* CV dropper */}
-      <label
+      {/* <label
         htmlFor="dropzone-file"
         className="relative flex h-64 w-full cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-gray-50 hover:bg-gray-100 "
       >
@@ -247,7 +247,7 @@ const ContactForm = () => {
             PDF or JPG (MAX. 5MB)
           </p>
         </div>
-      </label>
+      </label> */}
       <div className="mb-5">
         <label htmlFor="message" className="block mb-2 text-sm ">
           Message *
@@ -269,7 +269,13 @@ const ContactForm = () => {
         <p className="text-xs">Max 500 characters</p>
       </div>
 
-      {isSuccess ? (
+      <button
+        type="submit"
+        className="bg-transparent rounded-md py-2 px-6 border border-black mb-12  hover:bg-red-900 hover:text-white"
+      >
+        Submit
+      </button>
+      {/* {isSuccess ? (
         <button
           type="submit"
           className="bg-transparent rounded-md py-2 px-6 border border-black mb-12  hover:bg-red-900 hover:text-white"
@@ -285,7 +291,7 @@ const ContactForm = () => {
         >
           Submit
         </button>
-      )}
+      )} */}
     </form>
   );
 };

@@ -66,6 +66,5 @@ input[type="file"]::file-selector-button {
 
 input[type="file"] {
   text-align-last: center;
-  padding-top: 107px;
-  padding-bottom: 107px;
+  padding-top: 115px;
 }

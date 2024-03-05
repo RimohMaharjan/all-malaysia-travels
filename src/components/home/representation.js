@@ -14,7 +14,7 @@ const Representation = ({ repRef }) => {
     >
       <div className="table">
         <div className="md:table-cell align-middle text-red-900">
-        <h1 className="2xl:text-6xl xl:text-5xl text-4xl font-bold">
+          <h1 className="2xl:text-6xl xl:text-5xl text-4xl font-bold">
             Airline
           </h1>
           <h1 className="2xl:text-6xl xl:text-5xl text-4xl font-bold">
@@ -28,9 +28,8 @@ const Representation = ({ repRef }) => {
         {partners ? (
           <div className="grid md:grid-cols-3 grid-cols-2 xl:gap-x-32 lg:gap-x-5 md:gap-x-32 gap-5 items-center justify-items-center ">
             {partners.map((item, index) => (
-              <a href={item.url} target="_blank" rel="noreferrer">
+              <a key={index} href={item.url} target="_blank" rel="noreferrer">
                 <img
-                key={index}
                   className="inline object-contain md:h-auto h-32"
                   src={item.logo}
                   alt={item.alt}

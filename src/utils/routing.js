@@ -11,6 +11,7 @@ import NotFound from "../pages/notFound";
 
 import ToTop from "./scrollToTop";
 import Nav from "../components/general/nav";
+import Playground from "../pages/playground/playground";
 
 const Routing = () => {
   const homeRef = useRef(null);
@@ -68,6 +69,7 @@ const Routing = () => {
 
         {/* default routes for invalid links */}
         <Route path="*" element={<NotFound />} />
+        <Route path="/playground" element={<Playground />} />
       </Routes>
     </Router>
   );

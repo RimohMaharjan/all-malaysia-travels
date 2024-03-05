@@ -24,24 +24,19 @@ const Vision = ({ visionRef }) => {
           {vision ? (
             <div className="md:grid xl:grid-cols-2 grid-rows-2 2xl:gap-32 gap-10 md:w-[57vw] md:mx-auto md:space-y-0 space-y-16 font-extralight">
               {vision.map((item, index) => (
-                <>
-                  <div className="text-white"
-                  key={index}>
-                    <div className="flex items-center gap-4">
-                      <h1 className="md:text-7xl text-5xl">
-                        {item.number_text}
+                <div className="text-white" key={index}>
+                  <div className="flex items-center gap-4">
+                    <h1 className="md:text-7xl text-5xl">{item.number_text}</h1>
+                    <div className="w-full">
+                      <h1 className="md:text-4xl text-xl border-b p-2">
+                        {item.title}
                       </h1>
-                      <div className="w-full">
-                        <h1 className="md:text-4xl text-xl border-b p-2">
-                          {item.title}
-                        </h1>
-                        <p className="md:text-lg text-md p-2">
-                          {item.description}
-                        </p>
-                      </div>
+                      <p className="md:text-lg text-md p-2">
+                        {item.description}
+                      </p>
                     </div>
                   </div>
-                </>
+                </div>
               ))}
             </div>
           ) : vision_error ? (

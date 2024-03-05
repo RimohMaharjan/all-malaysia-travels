@@ -50,16 +50,13 @@ const Banner = ({ promotionRef }) => {
       {banner ? (
         <Slider {...settings}>
           {banner.map((item, index) => (
-            <>
-              <div>
-                <img
-                key={index}
-                  className="md:h-screen w-screen xl:object-cover object-contain"
-                  src={item.image}
-                  alt="banner"
-                />
-              </div>
-            </>
+            <div key={index}>
+              <img
+                className="md:h-screen w-screen xl:object-cover object-contain"
+                src={item.image}
+                alt="banner"
+              />
+            </div>
           ))}
         </Slider>
       ) : banner_error ? (

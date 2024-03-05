@@ -61,7 +61,7 @@ const Services = () => {
                   {item.service_images.map((product, index) => (
                     <div
                       key={index}
-                      className="inline grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90 pt-10"
+                      className="inline hover:scale-110 transition active:scale-90 pt-10"
                     >
                       <a href={product.url} target="_blank" rel="noreferrer">
                         <img
@@ -78,7 +78,7 @@ const Services = () => {
                   {item.service_images.map((product, index) => (
                     <div
                       key={index}
-                      className="inline grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
+                      className="inline hover:scale-110 transition active:scale-90"
                     >
                       <a href={product.url} target="_blank" rel="noreferrer">
                         <img

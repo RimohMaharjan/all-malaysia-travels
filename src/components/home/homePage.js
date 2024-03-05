@@ -20,13 +20,13 @@ const HomePage = ({ homeRef }) => {
             Welcome to Chariot
           </h1>
           {data && (
-            <p className="md:text-4xl text-lg text-white font-light text-center pb-4">
+            <p className="md:text-2xl text-md text-white font-light text-center pb-4">
               {data[1].description}
             </p>
           )}
 
           <Link to="/services">
-            <button className="md:text-lg text-md font-medium text-white py-2 px-4 border rounded hover:bg-red-900 ">
+            <button className="md:text-md text-sm font-medium text-white py-2 px-4 border rounded hover:bg-red-900 ">
               Our Services
             </button>
           </Link>

@@ -87,7 +87,7 @@ const Nav = ({
 
         
           <div className={`hidden lg:block text-black`}>
-            <ul className="flex space-x-12">
+            <ul className="flex space-x-10">
               {navItems.map((item, index) => (
                 <>
               {pathname === "/" && item.scroll ? (

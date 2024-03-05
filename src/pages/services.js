@@ -55,13 +55,13 @@ const Services = () => {
           {services.map((item, index) => (
             <div className="services-banner py-10 border-b-2 m-0" key={index}>
               <h1 className="text-4xl font-bold mb-5">{item.title}</h1>
-              <p className="font-light mb-5">{item.description}</p>
+              <p className="font-light mb-5 whitespace-pre-wrap">{item.description}</p>
               {item.service_images.length > 4 ? (
                 <Slider {...settings}>
                   {item.service_images.map((product, index) => (
                     <div
                       key={index}
-                      className="inline grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90 pt-10"
+                      className="inline hover:scale-110 transition active:scale-90 pt-10"
                     >
                       <a href={product.url} target="_blank" rel="noreferrer">
                         <img
@@ -78,7 +78,7 @@ const Services = () => {
                   {item.service_images.map((product, index) => (
                     <div
                       key={index}
-                      className="inline grayscale hover:grayscale-0 hover:scale-110 transition active:scale-90"
+                      className="inline hover:scale-110 transition active:scale-90"
                     >
                       <a href={product.url} target="_blank" rel="noreferrer">
                         <img

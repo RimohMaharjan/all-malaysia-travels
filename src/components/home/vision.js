@@ -23,9 +23,10 @@ const Vision = ({ visionRef }) => {
         <div className="col-span-2">
           {vision ? (
             <div className="md:grid xl:grid-cols-2 grid-rows-2 2xl:gap-32 gap-10 md:w-[57vw] md:mx-auto md:space-y-0 space-y-16 font-extralight">
-              {vision.map((item) => (
+              {vision.map((item, index) => (
                 <>
-                  <div className="text-white">
+                  <div className="text-white"
+                  key={index}>
                     <div className="flex items-center gap-4">
                       <h1 className="md:text-7xl text-5xl">
                         {item.number_text}

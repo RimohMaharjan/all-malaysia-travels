@@ -49,10 +49,11 @@ const Banner = ({ promotionRef }) => {
     <div ref={promotionRef} className="slider-container snap-always snap-start">
       {banner ? (
         <Slider {...settings}>
-          {banner.map((item) => (
+          {banner.map((item, index) => (
             <>
               <div>
                 <img
+                key={index}
                   className="md:h-screen w-screen xl:object-cover object-contain"
                   src={item.image}
                   alt="banner"

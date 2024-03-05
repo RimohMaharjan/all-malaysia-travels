@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { MenuContext } from "react-flexible-sliding-menu";
 import { IoMenuOutline } from "react-icons/io5";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 const Nav = ({
   homeRef,

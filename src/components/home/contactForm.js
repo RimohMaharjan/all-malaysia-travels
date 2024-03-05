@@ -88,7 +88,7 @@ const ContactForm = () => {
       <div className="md:grid md:grid-cols-2 gap-x-12 pt-8">
         <div className="mb-5">
           <label htmlFor="" className="block mb-2 text-sm">
-            Full Name *
+            Full Name <span className="text-red-600">*</span>
           </label>
           <input
             type="text"
@@ -107,7 +107,7 @@ const ContactForm = () => {
         </div>
         <div className="mb-5">
           <label htmlFor="" className="block mb-2 text-sm">
-            Country *
+            Country <span className="text-red-600">*</span>
           </label>
           <select
             value={formData.country}
@@ -132,7 +132,7 @@ const ContactForm = () => {
         </div>
         <div className="mb-5">
           <label htmlFor="email" className="block mb-2 text-sm">
-            Email *
+            Email <span className="text-red-600">*</span>
           </label>
           <input
             type="email"
@@ -151,7 +151,7 @@ const ContactForm = () => {
         </div>
         <div className="mb-5">
           <label htmlFor="" className="block mb-2 text-sm">
-            Contact *
+            Contact <span className="text-red-600">*</span>
           </label>
           <input
             type="number"
@@ -168,30 +168,6 @@ const ContactForm = () => {
             required
           />
         </div>
-
-        {/* <div className="mb-5">
-          <label class="block mb-2 text-sm " for="large_size">
-            Upload File
-          </label>
-          <input
-            class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer p-1.5 bg-white"
-            id="file"
-            type="file"
-            onChange={handleFileChange}
-          ></input>
-          {isSuccess ? <p className="text-xs">File size valid</p> : null}
-          <p className="text-xs">{errorMsg}</p>
-
-          {isSuccess ? (
-            <p className="text-sm font-semibold text-green-900">
-              Validation successful
-            </p>
-          ) : (
-            <p className="text-sm font-semibold text-red-800">
-              &nbsp;{errorMsg}&nbsp;
-            </p>
-          )}
-        </div> */}
       </div>
 
       {/* CV dropper */}
@@ -248,9 +224,34 @@ const ContactForm = () => {
           </p>
         </div>
       </label> */}
+
+      {/* <div className="mb-5">
+          <label class="block mb-2 text-sm " for="large_size">
+            Upload File
+          </label>
+          <input
+            class="block w-full text-sm border border-gray-300 rounded-lg cursor-pointer p-1.5 bg-white"
+            id="file"
+            type="file"
+            onChange={handleFileChange}
+          ></input>
+          {isSuccess ? <p className="text-xs">File size valid</p> : null}
+          <p className="text-xs">{errorMsg}</p>
+
+          {isSuccess ? (
+            <p className="text-sm font-semibold text-green-900">
+              Validation successful
+            </p>
+          ) : (
+            <p className="text-sm font-semibold text-red-800">
+              &nbsp;{errorMsg}&nbsp;
+            </p>
+          )}
+        </div> */}
+
       <div className="mb-5">
         <label htmlFor="message" className="block mb-2 text-sm ">
-          Message *
+          Message <span className="text-red-600">*</span>
         </label>
         <textarea
           id="message"
@@ -275,6 +276,7 @@ const ContactForm = () => {
       >
         Submit
       </button>
+
       {/* {isSuccess ? (
         <button
           type="submit"

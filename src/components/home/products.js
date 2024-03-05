@@ -56,7 +56,7 @@ const Products = ({ prodsRef }) => {
               >
                 <a href={item.url} target="_blank" rel="noreferrer">
                   <img
-                    className="inline object-contain mx-auto h-20 px-5"
+                    className="inline object-contain mx-auto h-20  px-5"
                     src={item.logo}
                     alt="products"
                   />

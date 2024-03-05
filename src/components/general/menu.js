@@ -101,7 +101,7 @@ function Menu() {
   return (
     <div>
       <div className="mx-auto flex items-center justify-between">
-        <div className="w-48 p-6">
+        <div className="h-28 w-80 p-6">
           <a href="/">
             <img
               onClick={scrollToTop}
@@ -111,7 +111,7 @@ function Menu() {
             />
           </a>
         </div>
-        <button onClick={closeMenu} className="text-2xl mr-4">
+        <button onClick={closeMenu} className="text-2xl mr-8">
           <RxCross1 />
         </button>
       </div>

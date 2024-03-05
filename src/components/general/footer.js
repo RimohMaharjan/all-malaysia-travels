@@ -19,21 +19,21 @@ const Footer = () => {
   const year = today.getFullYear();
 
   return (
-    <div className={` bg-transparent-600 p-10  z-20 shadow-lg bg-[#393939] `}>
+    <div className={` bg-transparent-600 md:p-10 p-5  z-20 shadow-lg bg-[#393939] `}>
       <div className="md:flex justify-between border-b-2  md:space-y-0 space-y-6 pb-6 ">
         <div className="md:mr-48 mr-0">
           <a href="/">
             <img
-              className="md:w-60 w-44"
+              className="md:w-60 w-56"
               alt="chariot logo"
               src={require("../../assets/images/logoWhite.png")}
             />
           </a>
         </div>
 
-        <div className="flex items-center  text-white space-x-8 md:text-2xl text-xl ">
+        <div className="flex items-center  text-white space-x-8 md:text-2xl text-lg ">
           <Link
-            className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-300 ease-in-out"
+            className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-500 ease-in-out"
             to="https://www.youtube.com/@TravelsChariot"
             target="_blank"
             rel="noreferrer"
@@ -42,7 +42,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-300 ease-in-out"
+            className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-500 ease-in-out"
             to="https://www.facebook.com/ChariotSG"
             target="_blank"
             rel="noreferrer"
@@ -51,7 +51,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-300 ease-in-out"
+            className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-500 ease-in-out"
             to="https://twitter.com/ChariotSG"
             target="_blank"
             rel="noreferrer"
@@ -60,7 +60,7 @@ const Footer = () => {
           </Link>
 
           <Link
-            className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-300 ease-in-out"
+            className="rounded-full border-2 p-2 hover:bg-white hover:text-black hover:transition duration-500 ease-in-out"
             to="https://www.instagram.com/chariottravels/"
             target="_blank"
             rel="noreferrer"

@@ -151,7 +151,7 @@ const ContactForm = () => {
         </div>
         <div className="mb-5">
           <label htmlFor="" className="block mb-2 text-sm">
-            Contact *
+            Mobile No. *
           </label>
           <input
             type="number"
@@ -164,7 +164,7 @@ const ContactForm = () => {
               })
             }
             className="shadow-sm  border border-gray-300 text-sm rounded-lg  block w-full p-2.5"
-            placeholder="Enter your contact information"
+            placeholder="Enter your mobile number"
             required
           />
         </div>

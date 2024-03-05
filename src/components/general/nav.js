@@ -55,6 +55,10 @@ const Nav = ({
       scroll: scrollToRep,
     },
     {
+      label: "Services",
+      path: "/services",
+    },
+    {
       label: "Promotions",
       path: "/",
       scroll: scrollToBanner,
@@ -81,39 +85,33 @@ const Nav = ({
           </a>
         </div>
 
-        <div className={`hidden lg:block text-black`}>
-          <ul className="flex space-x-12">
-            {pathname === "/" ? (
-              <>
-                {navItems.map((item, index) => (
-                  <p
-                    key={index}
-                    onClick={item.scroll}
-                    className={`cursor-pointer text-[15px] inline text-black`}
-                  >
-                    {item.label}
-                  </p>
-                ))}
+        
+          <div className={`hidden lg:block text-black`}>
+            <ul className="flex space-x-12">
+              {navItems.map((item, index) => (
+                <>
+              {pathname === "/" && item.scroll ? (
+                <p
+                  key={index}
+                  onClick={item.scroll}
+                  className={`cursor-pointer text-[15px] inline text-black`}
+                >
+                  {item.label}
+                </p>
+              ) : (
+                <a
+                  key={index}
+                  href={item.path}
+                  className={`cursor-pointer text-[15px] inline text-black`}
+                >
+                  {item.label}
+                </a>
+              )}
               </>
-            ) : (
-              <>
-                {navItems.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.path}
-                    className={`cursor-pointer text-[15px] inline text-black`}
-                  >
-                    {item.label}
-                  </a>
-                ))}
-              </>
-            )}
-            <li>
-              <Link to="/services">Services</Link>
-            </li>
-          </ul>
-        </div>
-
+              ))}
+            </ul>
+          </div>
+        
         <button
           onClick={toggleMenu}
           className={`text-4xl block lg:hidden text-black`}

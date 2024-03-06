@@ -43,7 +43,7 @@ const Footer = () => {
       <div className="md:grid xl:grid-cols-3 md:grid-cols-2 gap-5 justify-between border-b border-[#d9d9d960] md:space-y-0 space-y-6 pb-6 md:px-5">
         <a href="/">
           <img
-            className="md:w-80 w-44"
+            className="md:w-60 w-44"
             alt="chariot logo"
             src={require("../../assets/images/logoWhite.png")}
           />
@@ -99,7 +99,7 @@ const Footer = () => {
       </div>
 
       <div className="md:text-md text-sm text-center text-[#D9D9D9] pt-4 ">
-        © {year} | Chariot Ventures Group | Developed by{" "}
+        © {year} | Chariot Group | Developed by{" "}
         <a
           className="text-white hover:border-b"
           href="https://octacore.com.np/"

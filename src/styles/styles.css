@@ -1,0 +1,70 @@
+/* general */
+
+:root {
+  --light-green: #42b02980;
+  --green: #42b029;
+  --dark-green: #2d7e1a;
+  --darkest-green: #2b5233;
+  --white: #fafafa;
+  --black: #0d0d0f;
+}
+
+.slick-next {
+  right: 62px;
+  z-index: 10;
+}
+
+.slick-prev {
+  left: 62px;
+  z-index: 10;
+}
+
+.slick-dots {
+  bottom: 30px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 50px;
+}
+
+select:-internal-autofill-selected,
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+:focus-visible {
+  outline: 0 !important;
+}
+
+.products-banner .slick-prev:before,
+.products-banner .slick-next:before {
+  font-size: 30px;
+  color: black;
+}
+
+.services-banner .slick-prev:before,
+.services-banner .slick-next:before {
+  font-size: 30px;
+  color: black;
+}
+
+p {
+  text-align: justify;
+}
+
+.products-banner .slick-slider .slick-list {
+  margin: 0 100px;
+  padding: 0 !important;
+}
+
+input[type="file"]::file-selector-button {
+  /* visibility: hidden; */
+  display: none;
+}
+
+input[type="file"] {
+  text-align-last: center;
+  padding-top: 115px;
+}

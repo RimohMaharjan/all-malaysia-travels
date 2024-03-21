@@ -79,7 +79,7 @@ const Nav = ({
           <a href="/">
             <img
               className="md:h-20 h-20"
-              alt="chariot logo"
+              alt="All Malaysia Travels logo"
               src={require("../../assets/images/malaysia-logo.png")}
             />
           </a>

@@ -102,7 +102,7 @@ function Menu() {
             <img
               onClick={scrollToTop}
               className="h-16"
-              alt="chariot logo"
+              alt="All Malaysia Travels logo"
               src={require("../../assets/images/logoNew.png")}
             />
           </a>

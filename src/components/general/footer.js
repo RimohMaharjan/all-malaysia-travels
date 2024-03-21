@@ -44,7 +44,7 @@ const Footer = () => {
         <a href="/">
           <img
             className="md:w-60 w-44"
-            alt="chariot logo"
+            alt="All Malaysia Travels logo"
             src={require("../../assets/images/logoWhite.png")}
           />
         </a>
@@ -99,7 +99,7 @@ const Footer = () => {
       </div>
 
       <div className="md:text-md text-sm text-center text-[#D9D9D9] pt-4 ">
-        © {year} | Chariot Group | Developed by{" "}
+        © {year} | All Malaysia Travels  | Developed by{" "}
         <a
           className="text-white hover:border-b"
           href="https://octacore.com.np/"

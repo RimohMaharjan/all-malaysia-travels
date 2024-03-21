@@ -17,7 +17,7 @@ const HomePage = ({ homeRef }) => {
       <div className="table min-h-screen">
         <div className="table-cell align-middle text-center w-[97vw]  mx-auto">
           <h1 className="md:text-7xl text-4xl text-white font-bold mb-4">
-            Welcome to Chariot
+            Welcome to All Malaysia Travels
           </h1>
           {data && (
             <p className="md:text-2xl text-md text-white font-light text-center pb-4">

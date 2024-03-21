@@ -65,7 +65,7 @@ const Banner = ({ promotionRef }) => {
               {banner.map((item, index) => (
                 <div className="md:h-screen relative grid-imp" key={index}>
                   <img
-                    className="md:hidden block h-screen w-screen object-cover absolute top-0 left-0 -z-10 blur-2xl grayscale-[40%]"
+                    className="md:hidden block h-screen w-screen object-cover absolute top-0 left-0 -z-10 blur-2xl opacity-50"
                     src={item.image}
                     alt="blurred background"
                   />

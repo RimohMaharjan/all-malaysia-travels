@@ -45,12 +45,12 @@ const Footer = () => {
           <img
             className="md:w-60 w-44"
             alt="All Malaysia Travels logo"
-            src={require("../../assets/images/logoWhite.png")}
+            src={require("../../assets/images/malaysia-logo-white.png")}
           />
         </a>
 
         <div className="flex items-center md:justify-center text-[#D9D9D9] space-x-8 md:text-2xl text-xl ">
-          {socials.map((social, index) => (
+          {/* {socials.map((social, index) => (
             <Link
               key={index}
               to={social.link}
@@ -60,7 +60,7 @@ const Footer = () => {
             >
               {social.icon}
             </Link>
-          ))}
+          ))} */}
         </div>
 
         {footer ? (

@@ -99,7 +99,7 @@ const Footer = () => {
       </div>
 
       <div className="md:text-md text-sm text-center text-[#D9D9D9] pt-4 ">
-        © {year} | All Malaysia Travels  | Developed by{" "}
+        © {year} | All Malaysia Travels | Developed by{" "}
         <a
           className="text-white hover:border-b"
           href="https://octacore.com.np/"

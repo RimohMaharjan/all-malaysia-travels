@@ -5,7 +5,7 @@ const NotFound = () => {
     <div className="h-screen grid place-items-center">
       <div className="text-center">
         <img
-          className="lg:w-[20vw] w-[50vw]"
+          className="lg:w-[20vw] w-[50vw] pb-5"
           src={require("../assets/images/404.png")}
           alt="404"
         />

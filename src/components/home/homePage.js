@@ -16,7 +16,7 @@ const HomePage = ({ homeRef }) => {
     >
       <div className="grid place-content-center h-screen mx-auto">
         <h1 className="md:text-7xl text-4xl text-white font-bold mb-4 text-center">
-          Welcome to All Malaysia Travels
+          Welcome to All Malaysia Travel
         </h1>
         {data && (
           <p className="md:text-2xl text-md text-white font-light text-center pb-4">

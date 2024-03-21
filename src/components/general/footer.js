@@ -44,13 +44,13 @@ const Footer = () => {
         <a href="/">
           <img
             className="md:w-60 w-44"
-            alt="All Malaysia Travels logo"
+            alt="All Malaysia Travel logo"
             src={require("../../assets/images/malaysia-logo-white.png")}
           />
         </a>
 
-        <div className="flex items-center md:justify-center text-[#D9D9D9] space-x-8 md:text-2xl text-xl ">
-          {/* {socials.map((social, index) => (
+        {/* <div className="flex items-center md:justify-center text-[#D9D9D9] space-x-8 md:text-2xl text-xl ">
+         {socials.map((social, index) => (
             <Link
               key={index}
               to={social.link}
@@ -60,12 +60,14 @@ const Footer = () => {
             >
               {social.icon}
             </Link>
-          ))} */}
-        </div>
+          ))}
+        </div> */}
 
         {footer ? (
-          <div className="text-[#D9D9D9] text-sm mb-2 xl:col-span-1 md:col-span-2 col-span-1">
-            <div className="w-fit space-y-3 xl:float-right">
+          // <div className="text-[#D9D9D9] text-sm mb-2 xl:col-span-1 md:col-span-2 col-span-1">
+          <div className="text-[#D9D9D9] text-sm mb-2 col-span-2">
+            {/* <div className="w-fit space-y-3 xl:float-right"> */}
+            <div className="w-full xl:space-x-5 space-y-3 xl:space-y-0 xl:flex xl:items-center xl:justify-end h-full ">
               <a
                 className={`block md:text-md text-sm`}
                 href={`tel: ${footer[2].description}`}
@@ -99,7 +101,7 @@ const Footer = () => {
       </div>
 
       <div className="md:text-md text-sm text-center text-[#D9D9D9] pt-4 ">
-        © {year} | All Malaysia Travels | Developed by{" "}
+        © {year} | All Malaysia Travel | Developed by{" "}
         <a
           className="text-white hover:border-b"
           href="https://octacore.com.np/"

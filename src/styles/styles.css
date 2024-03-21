@@ -68,3 +68,7 @@ input[type="file"] {
   text-align-last: center;
   padding-top: 115px;
 }
+
+.grid-imp {
+  display: grid !important;
+}

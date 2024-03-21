@@ -11,7 +11,7 @@ const About = ({ aboutRef }) => {
   return (
     <div
       ref={aboutRef}
-      className="md:snap-always md:snap-start md:min-h-screen grid md:grid-cols-2 place-items-center gap-4 py-10 relative"
+      className="md:snap-always md:snap-start md:min-h-screen grid md:grid-cols-2 place-items-center gap-4 px-5 py-10 relative"
     >
       <div
         className="md:flex md:flex-col justify-center text-black md:w-[35vw] mx-auto"
@@ -21,7 +21,7 @@ const About = ({ aboutRef }) => {
           <b>About</b> us
         </h2>
         {about ? (
-          <p className="md:text-lg text-sm text font-light" >
+          <p className="whitespace-pre-wrap md:text-lg text-sm text font-light">
             {about[0].description}
           </p>
         ) : about_error ? (
@@ -31,8 +31,12 @@ const About = ({ aboutRef }) => {
         )}
       </div>
 
-      <div>
-        <img className="absolute right-0 bottom-0 w-[56vw]" src={require("../../assets/images/malaysia-about.png")} alt="about" />
+      <div className="md:block hidden">
+        <img
+          className="absolute right-0 bottom-0 w-[56vw]"
+          src={require("../../assets/images/malaysia-about.png")}
+          alt="about"
+        />
       </div>
     </div>
   );

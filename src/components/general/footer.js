@@ -36,6 +36,7 @@ const Footer = () => {
       icon: <FaInstagram />,
     },
   ];
+
   return (
     <div
       className={` bg-transparent-600 pt-12 pb-3 md:px-14 px-8 z-20 shadow-lg bg-[#393939] `}
@@ -43,7 +44,7 @@ const Footer = () => {
       <div className="md:grid xl:grid-cols-3 md:grid-cols-2 gap-5 justify-between border-b border-[#d9d9d960] md:space-y-0 space-y-6 pb-6 md:px-5">
         <a href="/">
           <img
-            className="md:w-60 w-44"
+            className="w-44"
             alt="All Malaysia Travel logo"
             src={require("../../assets/images/malaysia-logo-white.png")}
           />
@@ -67,7 +68,7 @@ const Footer = () => {
           // <div className="text-[#D9D9D9] text-sm mb-2 xl:col-span-1 md:col-span-2 col-span-1">
           <div className="text-[#D9D9D9] text-sm mb-2 col-span-2">
             {/* <div className="w-fit space-y-3 xl:float-right"> */}
-            <div className="w-full xl:space-x-5 space-y-3 xl:space-y-0 xl:flex xl:items-center xl:justify-end h-full ">
+            <div className="w-full 2xl:space-x-5 space-y-3 2xl:space-y-0 2xl:flex 2xl:items-center 2xl:justify-end h-full ">
               <a
                 className={`block md:text-md text-sm`}
                 href={`tel: ${footer[2].description}`}

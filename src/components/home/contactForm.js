@@ -216,7 +216,7 @@ const ContactForm = () => {
 					placeholder="Write your message here"
 					required
 				/>
-				<p className="text-xs">Max 500 characters</p>
+				{/* <p className="text-xs">Max 500 characters</p> */}
 			</div>
 
 			{/* CV dropper */}

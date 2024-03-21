@@ -47,9 +47,11 @@ const ContactForm = () => {
 		axios
 			.post(`${API_URL}contact-form/`, contactFormData, {
 				headers: {
-					Authorization: `Basic ${window.btoa(
-						"frontend:3!Pe4-QVjruBM9D"
-					)}`,
+					Authorization:
+						"Basic" +
+						window.btoa(
+							`${process.env.REACT_APP_FRONTEND_USERNAME}:${process.env.REACT_APP_FRONTEND_PASSWORD}`
+						),
 					"Content-Type": "multipart/form-data",
 				},
 			})

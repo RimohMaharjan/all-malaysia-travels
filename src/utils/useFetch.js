@@ -7,7 +7,10 @@ const useFetch = (url) => {
 
 	useEffect(() => {
 		var headers = new Headers();
-		headers.append("Authorization", `Basic ${window.btoa("druk:1234")}`);
+		headers.append(
+			"Authorization",
+			`Basic ${window.btoa("frontend:3!Pe4-QVjruBM9D")}`
+		);
 		headers.append("Accept", "application/json");
 		fetch(url, {
 			headers: headers,

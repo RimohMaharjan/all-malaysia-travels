@@ -72,13 +72,13 @@ const Nav = ({
 
   return (
     <nav
-      className={`fixed w-screen bg-transparent-600 p-6 xl:px-32 lg:px-6 px-4 z-20 shadow-lg bg-[#f6f6f688]`}
+      className={`fixed w-screen bg-transparent-600 p-4 xl:px-32 lg:px-6 px-4 z-20 shadow-lg bg-[#f6f6f688]`}
     >
       <div className="mx-auto flex items-center justify-between mr-6">
         <div className="">
           <a href="/">
             <img
-              className="md:h-20 h-20"
+              className="h-16"
               alt="All Malaysia Travel logo"
               src={require("../../assets/images/malaysia-logo.png")}
             />

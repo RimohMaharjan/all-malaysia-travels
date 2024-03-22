@@ -47,17 +47,44 @@ const Banner = ({ promotionRef }) => {
   return (
     <div ref={promotionRef} className="slider-container snap-always snap-start">
       {banner ? (
-        <Slider {...settings}>
-          {banner.map((item, index) => (
-            <div key={index}>
-              <img
-                className="md:h-screen w-screen xl:object-cover object-contain"
-                src={item.image}
-                alt="banner"
-              />
-            </div>
-          ))}
-        </Slider>
+        <>
+          {banner.length === 1 ? (
+            <>
+              {banner.map((item, index) => (
+                <a href={item.url} target="_blank" rel="noreferrer" key={index}>
+                  <img
+                    className="xl:max-h-screen w-screen place-self-center xl:object-cover object-contain"
+                    src={item.image}
+                    alt="banner"
+                  />
+                </a>
+              ))}
+            </>
+          ) : (
+            <Slider {...settings}>
+              {banner.map((item, index) => (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}
+                  className="md:h-screen relative grid-imp"
+                >
+                  <img
+                    className="md:hidden block h-screen w-screen object-cover absolute top-0 left-0 -z-10 blur-2xl opacity-50"
+                    src={item.image}
+                    alt="blurred background"
+                  />
+                  <img
+                    className="xl:max-h-screen w-screen place-self-center xl:object-cover object-contain"
+                    src={item.image}
+                    alt="banner"
+                  />
+                </a>
+              ))}
+            </Slider>
+          )}
+        </>
       ) : banner_error ? (
         <p className="text-center">{banner_error}</p>
       ) : (

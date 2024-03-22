@@ -43,7 +43,6 @@ const Banner = ({ promotionRef }) => {
   const { data: banner, error: banner_error } = useFetch(
     `${API_URL}promotional-banners/`
   );
-  // console.log(banner.length === 3);
   return (
     <div ref={promotionRef} className="slider-container snap-always snap-start">
       {banner ? (
@@ -51,19 +50,25 @@ const Banner = ({ promotionRef }) => {
           {banner.length === 1 ? (
             <>
               {banner.map((item, index) => (
-                <div key={index}>
+                <a href={item.url} target="_blank" rel="noreferrer" key={index}>
                   <img
                     className="xl:max-h-screen w-screen place-self-center xl:object-cover object-contain"
                     src={item.image}
                     alt="banner"
                   />
-                </div>
+                </a>
               ))}
             </>
           ) : (
             <Slider {...settings}>
               {banner.map((item, index) => (
-                <div className="md:h-screen relative grid-imp" key={index}>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={index}
+                  className="md:h-screen relative grid-imp"
+                >
                   <img
                     className="md:hidden block h-screen w-screen object-cover absolute top-0 left-0 -z-10 blur-2xl opacity-50"
                     src={item.image}
@@ -74,7 +79,7 @@ const Banner = ({ promotionRef }) => {
                     src={item.image}
                     alt="banner"
                   />
-                </div>
+                </a>
               ))}
             </Slider>
           )}

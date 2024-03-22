@@ -46,7 +46,7 @@ const Banner = ({ promotionRef }) => {
   return (
     <div ref={promotionRef} className="slider-container snap-always snap-start">
       {banner ? (
-        <div>
+        <>
           {banner.length === 1 ? (
             <>
               {banner.map((item, index) => (
@@ -83,7 +83,7 @@ const Banner = ({ promotionRef }) => {
               ))}
             </Slider>
           )}
-        </div>
+        </>
       ) : banner_error ? (
         <p className="text-center">{banner_error}</p>
       ) : (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { API_URL } from "../../constants";
 import useFetch from "../../utils/useFetch";
 
@@ -7,6 +7,8 @@ const About = ({ aboutRef }) => {
   const { data: about, error: about_error } = useFetch(
     `${API_URL}home-page-data/`
   );
+
+  const [showMore, setShowMore] = useState(false);
 
   return (
     <div
@@ -21,9 +23,25 @@ const About = ({ aboutRef }) => {
           <b>About</b> us
         </h2>
         {about ? (
-          <p className="whitespace-pre-wrap md:text-lg text-sm text font-light">
-            {about[0].description}
-          </p>
+          <>
+            <h6>
+              {showMore ? (
+                <p className="whitespace-pre-wrap md:text-lg text-sm text font-light pb-4">
+                  {about[0].description}
+                </p>
+              ) : (
+                <p className="whitespace-pre-wrap md:text-lg text-sm text font-light pb-4">
+                  {about[0].description.substring(0, 300)} ....
+                </p>
+              )}
+              <button
+                className="bg-transparent hover:bg-[#002D56] text-[#002D56] hover:text-white py-1 px-3 border border-[#002D56] rounded"
+                onClick={() => setShowMore(!showMore)}
+              >
+                {showMore ? "Show less" : "Show more"}
+              </button>
+            </h6>
+          </>
         ) : about_error ? (
           <p className="text-center">{about_error}</p>
         ) : (

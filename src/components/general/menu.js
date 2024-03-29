@@ -103,7 +103,7 @@ function Menu() {
               onClick={scrollToTop}
               className="h-16"
               alt="chariot logo"
-              src={require("../../assets/images/logoNew.png")}
+              src={require("../../assets/images/tamicha.png")}
             />
           </a>
         </div>

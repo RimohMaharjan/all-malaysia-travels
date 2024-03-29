@@ -1,5 +1,5 @@
 import React from "react";
-import bgImg from "../../assets/images/home.png";
+import bgImg from "../../assets/images/tamicha-homepage.jpg"
 import { Link } from "react-router-dom";
 import { API_URL } from "../../constants";
 import useFetch from "../../utils/useFetch";
@@ -17,7 +17,7 @@ const HomePage = ({ homeRef }) => {
       <div className="table min-h-screen">
         <div className="table-cell align-middle text-center w-[97vw]  mx-auto">
           <h1 className="md:text-7xl text-4xl text-white font-bold mb-4">
-            Welcome to Chariot
+            Welcome to Tamicha
           </h1>
           {data && (
             <p className="md:text-2xl text-md text-white font-light text-center pb-4">
@@ -26,7 +26,7 @@ const HomePage = ({ homeRef }) => {
           )}
 
           <Link to="/services">
-            <button className="md:text-md text-sm font-medium text-white py-2 px-4 border rounded hover:bg-red-900 ">
+            <button className="md:text-md text-sm font-medium text-white py-2 px-4 border rounded hover:bg-[#466C45] ">
               Our Services
             </button>
           </Link>

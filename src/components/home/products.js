@@ -41,7 +41,7 @@ const Products = ({ prodsRef }) => {
     >
       <h1
         className="md:text-center md:text-5xl text-4xl md:pt-20 pb-16"
-        style={{ color: "#711D1F" }}
+        style={{ color: "#466C45" }}
       >
         <b>Our</b> products
       </h1>

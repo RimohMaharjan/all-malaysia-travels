@@ -80,7 +80,7 @@ const Nav = ({
             <img
               className="md:h-14 h-14"
               alt="chariot logo"
-              src={require("../../assets/images/logoNew.png")}
+              src={require("../../assets/images/tamicha.png")}
             />
           </a>
         </div>

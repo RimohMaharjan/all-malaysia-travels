@@ -1,5 +1,5 @@
 import React from "react";
-import bgImg from "../assets/images/services.png";
+import bgImg from "../assets/images/tamicha-vision.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -49,7 +49,7 @@ const Services = () => {
 
       {services ? (
         <div
-          className="w-[85vw] mx-auto pt-6 text-red-900 border-b pb-20"
+          className="w-[85vw] mx-auto pt-6 text-[#466C45] border-b pb-20"
           style={{ borderBlockColor: "#D9D9D9" }}
         >
           {services.map((item, index) => (

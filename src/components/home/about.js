@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { API_URL } from "../../constants";
 import useFetch from "../../utils/useFetch";
 
@@ -11,11 +11,11 @@ const About = ({ aboutRef }) => {
   return (
     <div
       ref={aboutRef}
-      className="md:snap-always md:snap-start md:min-h-screen grid md:grid-cols-2 place-items-center gap-4 py-10 px-5"
+      className="md:snap-always md:snap-start md:min-h-screen grid md:grid-cols-2 place-items-center gap-4 px-5 py-10 relative"
     >
-      <div
+     <div
         className="md:flex md:flex-col justify-center text-black md:w-[35vw] mx-auto"
-        style={{ color: "#711D1F" }}
+        style={{ color: "#466C45" }}
       >
         <h2 className="md:text-6xl text-4xl pb-4 md:pt-0 pt-6">
           <b>About</b> us
@@ -31,8 +31,12 @@ const About = ({ aboutRef }) => {
         )}
       </div>
 
-      <div>
-        <img src={require("../../assets/images/about.png")} alt="about" />
+      <div className="md:block hidden">
+        <img
+          className="absolute right-0 bottom-0 w-[44vw]"
+          src={require("../../assets/images/tamicha-about.jpg")}
+          alt="about"
+        />
       </div>
     </div>
   );

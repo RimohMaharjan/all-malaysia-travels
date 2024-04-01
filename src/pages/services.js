@@ -49,12 +49,12 @@ const Services = () => {
 
       {services ? (
         <div
-          className="w-[85vw] mx-auto pt-6 text-[#466C45] border-b pb-20"
+          className="w-[85vw] mx-auto pt-6  border-b pb-20"
           style={{ borderBlockColor: "#D9D9D9" }}
         >
           {services.map((item, index) => (
             <div className="services-banner py-10 border-b-2 m-0" key={index}>
-              <h1 className="text-4xl font-bold mb-5">{item.title}</h1>
+              <h1 className="text-4xl font-bold mb-5 text-[#B163A3]">{item.title}</h1>
               <p className="font-light mb-5 whitespace-pre-wrap">{item.description}</p>
               {item.service_images.length > 4 ? (
                 <Slider {...settings}>

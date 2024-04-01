@@ -45,7 +45,7 @@ const Footer = () => {
           <img
             className="md:w-60 w-44"
             alt="chariot logo"
-            src={require("../../assets/images/tamicha.png")}
+            src={require("../../assets/images/tamicha-logo-white.png")}
           />
         </a>
 

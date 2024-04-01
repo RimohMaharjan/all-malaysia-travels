@@ -7,7 +7,13 @@ const useFetch = (url) => {
 
 	useEffect(() => {
 		var headers = new Headers();
-		headers.append("Authorization", `Basic ${window.btoa("druk:1234")}`);
+		headers.append(
+			"Authorization",
+			"Basic " +
+				window.btoa(
+					`${process.env.REACT_APP_FRONTEND_USERNAME}:${process.env.REACT_APP_FRONTEND_PASSWORD}`
+				)
+		);
 		headers.append("Accept", "application/json");
 		fetch(url, {
 			headers: headers,

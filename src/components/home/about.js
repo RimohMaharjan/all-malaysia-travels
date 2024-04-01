@@ -13,11 +13,8 @@ const About = ({ aboutRef }) => {
       ref={aboutRef}
       className="md:snap-always md:snap-start md:min-h-screen grid md:grid-cols-2 place-items-center gap-4 px-5 py-10 relative"
     >
-     <div
-        className="md:flex md:flex-col justify-center text-black md:w-[35vw] mx-auto"
-        
-      >
-        <h2 className="md:text-6xl text-4xl pb-4 md:pt-0 pt-6 text-[#B163A3]" >
+      <div className="md:flex md:flex-col justify-center text-black md:w-[35vw] mx-auto">
+        <h2 className="md:text-6xl text-4xl pb-4 md:pt-0 pt-6 text-[#B163A3]">
           <b>About</b> us
         </h2>
         {about ? (
@@ -33,7 +30,7 @@ const About = ({ aboutRef }) => {
 
       <div className="md:block hidden">
         <img
-          className="absolute right-0 bottom-0 w-[56vw]"
+          className="absolute right-0 bottom-0 w-[56vw] max-h-screen object-contain pt-5"
           src={require("../../assets/images/tamicha-about.png")}
           alt="about"
         />

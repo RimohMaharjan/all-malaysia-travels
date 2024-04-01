@@ -15,7 +15,7 @@ const About = ({ aboutRef }) => {
     >
      <div
         className="md:flex md:flex-col justify-center text-black md:w-[35vw] mx-auto"
-        style={{ color: "#466C45" }}
+        style={{ color: "#B163A3" }}
       >
         <h2 className="md:text-6xl text-4xl pb-4 md:pt-0 pt-6">
           <b>About</b> us
@@ -33,8 +33,8 @@ const About = ({ aboutRef }) => {
 
       <div className="md:block hidden">
         <img
-          className="absolute right-0 bottom-0 w-[44vw]"
-          src={require("../../assets/images/tamicha-about.jpg")}
+          className="absolute right-0 bottom-0 w-[56vw]"
+          src={require("../../assets/images/tamicha-about.png")}
           alt="about"
         />
       </div>

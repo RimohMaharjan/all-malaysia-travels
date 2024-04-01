@@ -13,10 +13,8 @@ const Representation = ({ repRef }) => {
       className="snap-always snap-start max-w-screen-2xl mx-auto lg:grid grid-cols-3 md:min-h-screen 2xl:px-5 md:px-20 px-5 lg:pt-0 pt-20"
     >
       <div className="table">
-        <div className="md:table-cell align-middle text-[#466C45]">
-          <h1 className="2xl:text-6xl xl:text-5xl text-4xl font-bold">
-            Airline
-          </h1>
+        <div className="md:table-cell align-middle text-[#B163A3]">
+         
           <h1 className="2xl:text-6xl xl:text-5xl text-4xl font-bold">
             Representation
           </h1>

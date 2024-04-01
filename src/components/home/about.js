@@ -15,9 +15,9 @@ const About = ({ aboutRef }) => {
     >
      <div
         className="md:flex md:flex-col justify-center text-black md:w-[35vw] mx-auto"
-        style={{ color: "#B163A3" }}
+        
       >
-        <h2 className="md:text-6xl text-4xl pb-4 md:pt-0 pt-6">
+        <h2 className="md:text-6xl text-4xl pb-4 md:pt-0 pt-6 text-[#B163A3]" >
           <b>About</b> us
         </h2>
         {about ? (

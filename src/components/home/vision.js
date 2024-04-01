@@ -9,14 +9,9 @@ const Vision = ({ visionRef }) => {
   return (
     <div
       ref={visionRef}
-      className="snap-always snap-start md:h-screen relative"
+      className="snap-always snap-start md:h-screen bg-no-repeat bg-cover px-5 py-14"
+      style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <img
-        className="absolute -z-10 h-screen w-screen object-cover blur-sm"
-        src={require("../../assets/images/tamicha-vision.jpg")}
-        alt="about"
-      />
-
       <div className="md:grid grid-cols-3 place-items-center md:h-screen">
         <div className="text-white md:text-center md:border-l-8 py-5 md:pl-5">
           <h1 className="lg:text-5xl text-4xl font-medium mb-4">

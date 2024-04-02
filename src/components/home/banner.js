@@ -33,7 +33,7 @@ const Banner = ({ promotionRef }) => {
     infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 4000,
     cssEase: "linear",
     nextArrow: <NextArrow />,
@@ -68,10 +68,10 @@ const Banner = ({ promotionRef }) => {
                   target="_blank"
                   rel="noreferrer"
                   key={index}
-                  className="md:h-screen relative grid-imp"
+                  className="md:h-screen relative grid-imp md:min-h-0 sm:min-h-[80vh] min-h-[40vh]"
                 >
                   <img
-                    className="md:hidden block h-screen w-screen object-cover absolute top-0 left-0 -z-10 blur-2xl opacity-50"
+                    className="block md:hidden h-screen w-screen object-cover absolute top-0 left-0 -z-10 blur-2xl opacity-50"
                     src={item.image}
                     alt="blurred background"
                   />

@@ -20,19 +20,19 @@ const Footer = () => {
 
   const socials = [
     {
-      link: "https://www.youtube.com/@TravelsChariot",
+      // link: "https://www.youtube.com/@TravelsChariot",
       icon: <AiOutlineYoutube />,
     },
     {
-      link: "https://www.facebook.com/ChariotSG",
+      link: "https://www.facebook.com/tamichaluxury",
       icon: <FaFacebookF />,
     },
     {
-      link: "https://twitter.com/ChariotSG",
+      // link: "https://twitter.com/ChariotSG",
       icon: <FaXTwitter />,
     },
     {
-      link: "https://www.instagram.com/chariottravels/",
+      // link: "https://www.instagram.com/chariottravels/",
       icon: <FaInstagram />,
     },
   ];

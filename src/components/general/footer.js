@@ -19,22 +19,22 @@ const Footer = () => {
   const year = today.getFullYear();
 
   const socials = [
-    {
-      // link: "https://www.youtube.com/@TravelsChariot",
-      icon: <AiOutlineYoutube />,
-    },
+    // {
+    //   // link: "https://www.youtube.com/@TravelsChariot",
+    //   icon: <AiOutlineYoutube />,
+    // },
     {
       link: "https://www.facebook.com/tamichaluxury",
       icon: <FaFacebookF />,
     },
-    {
-      // link: "https://twitter.com/ChariotSG",
-      icon: <FaXTwitter />,
-    },
-    {
-      // link: "https://www.instagram.com/chariottravels/",
-      icon: <FaInstagram />,
-    },
+    // {
+    //   // link: "https://twitter.com/ChariotSG",
+    //   icon: <FaXTwitter />,
+    // },
+    // {
+    //   // link: "https://www.instagram.com/chariottravels/",
+    //   icon: <FaInstagram />,
+    // },
   ];
   return (
     <div
@@ -99,7 +99,7 @@ const Footer = () => {
       </div>
 
       <div className="md:text-md text-sm text-center text-[#D9D9D9] pt-4 ">
-        © {year} | Chariot Group | Developed by{" "}
+        © {year} | Tamicha | Developed by{" "}
         <a
           className="text-white hover:border-b"
           href="https://octacore.com.np/"

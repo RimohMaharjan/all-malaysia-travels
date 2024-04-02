@@ -103,7 +103,7 @@ function Menu() {
               onClick={scrollToTop}
               className="h-16"
               alt="All Malaysia Travel logo"
-              src={require("../../assets/images/malaysia-logo-white.png")}
+              src={require("../../assets/images/malaysia-logo.png")}
             />
           </a>
         </div>

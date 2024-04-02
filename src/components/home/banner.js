@@ -71,7 +71,7 @@ const Banner = ({ promotionRef }) => {
                   className="md:h-screen relative grid-imp"
                 >
                   <img
-                    className="md:hidden block h-screen w-screen object-cover absolute top-0 left-0 -z-10 blur-2xl opacity-50"
+                    className="md:block h-screen w-screen object-cover absolute top-0 left-0 -z-10 blur-2xl opacity-50"
                     src={item.image}
                     alt="blurred background"
                   />

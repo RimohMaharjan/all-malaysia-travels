@@ -9,10 +9,10 @@ const Vision = ({ visionRef }) => {
   return (
     <div
       ref={visionRef}
-      className="snap-always snap-start md:h-screen bg-no-repeat bg-cover px-5 py-14"
+      className="snap-always snap-start  bg-no-repeat bg-cover px-5 py-14"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="md:grid grid-cols-3 place-items-center md:h-screen">
+      <div className="md:grid grid-cols-3 place-items-center">
         <div className="text-white md:text-center md:border-l-8 py-5 md:pl-5">
           <h1 className="lg:text-5xl text-4xl font-medium mb-4">
             Your Vision,

@@ -38,7 +38,7 @@ const Footer = () => {
   ];
   return (
     <div
-      className={` bg-transparent-600 pt-12 pb-3 md:px-14 px-8 z-20 shadow-lg bg-[#393939] `}
+      className={` bg-transparent-600 pt-12 pb-3 md:px-14 px-8 z-20 shadow-lg bg-[#573451] `}
     >
       <div className="md:grid xl:grid-cols-3 md:grid-cols-2 gap-5 justify-between border-b border-[#d9d9d960] md:space-y-0 space-y-6 pb-6 md:px-5">
         <a href="/">

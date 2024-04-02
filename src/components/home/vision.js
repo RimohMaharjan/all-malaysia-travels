@@ -12,7 +12,7 @@ const Vision = ({ visionRef }) => {
       className="snap-always snap-start lg:h-screen bg-no-repeat bg-cover px-5 py-14"
       style={{ backgroundImage: `url(${bgImg})` }}
     >
-      <div className="md:grid grid-cols-3 place-items-center">
+      <div className="md:grid grid-cols-3 place-items-center lg:h-screen md:min-h-screen md:h-auto">
         <div className="text-white md:text-center md:border-l-8 py-5 md:pl-5">
           <h1 className="lg:text-5xl text-4xl font-medium mb-4">
             Your Vision,
